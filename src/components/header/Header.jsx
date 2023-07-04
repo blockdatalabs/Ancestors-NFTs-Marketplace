@@ -3,7 +3,7 @@ import React , { useState , useEffect } from 'react';
 import { Link , NavLink } from 'react-router-dom';
 import menus from '../../pages/menu';
 
-import logo from '../../assets/images/logo/logo.png'
+import logo from '../../assets/images/logo/logo-header.png'
 
 import './styles.scss';
 
@@ -44,7 +44,7 @@ const Header = () => {
                         <div className="header__body">
                             <div className="header__logo">
                                 <Link to="/">
-                                    <img id="site-logo" src={logo} alt='Ancestors' />
+                                    <img id="site-logo" src={logo} style={{width: "100px"}} alt='Ancestors' />
                                 </Link>
                             </div>
 
