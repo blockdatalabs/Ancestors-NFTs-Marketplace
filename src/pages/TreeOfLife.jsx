@@ -70,15 +70,14 @@ function TreeOfLife() {
         <section className="banner">
             <div className="container big">
                 <div className="row">
-                    <h1>
+                    <h2>
                     <br/>
                     <br/>
-                      Tree of Life
+                      Tree of Life calling World Builders
                     <br/>
                     <br/>
-                    </h1>
-                    <h2>World Builders </h2>
-        <div>
+                    </h2>
+        <div className='col-md-6'>
         <br/>
         <br/>
         <br/>
@@ -86,37 +85,38 @@ function TreeOfLife() {
         </div>
         <br />
         <br />
+        <div className='col-md-6'>
         <h2>        
-          <br />
           <br />
           Evolve them
         </h2>
         <form onSubmit={handleSubmit} className="form-group">
-      <input
-        type="text"
-        className="form-control"
-        id="message"
-        name="message"
-        value={message}
-        placeholder="Your Prompt"
-        onChange={(event) =>
-          setMessage(event.target.value)
-        }
-        style={{width: 400}}
-      />
+          <input
+            type="text"
+            className="form-control"
+            id="message"
+            name="message"
+            value={message}
+            placeholder="Your Prompt"
+            onChange={(event) =>
+              setMessage(event.target.value)
+            }
+            style={{width: 400}}
+          />
 
-      <br />
-      <br />
-
-      <button type="submit" className="btn btn-primary">Evolve them</button>
-
-      <br />
-      <br />
-
-      <h2>{message}</h2>
-    </form>
+          <br />
+          <br />
+          
+          <button type="submit" className="btn btn-primary">Evolve them</button>
+          
+          <br />
+          <br />
+          
+          <h2>{message}</h2>
+        </form>
         <br />
         <br />
+      </div>
         <div className='row' style={{marginTop: 200, marginBottom: 200}}>
         { generationId ?
           leoImages.map( (leoImage, idx) =>(
@@ -128,6 +128,16 @@ function TreeOfLife() {
           <h4>Submit, wait and get the results</h4>
         }
         </div>
+        <div className="block-text">
+                                    <h3 className="heading">Join us for great 
+                                          Events and alphas<br/>
+                                         While interacting with like minded creators</h3>
+                                         <a href="https://discord.com/invite/4mXg6QSyY8" className="action-btn" ><span style={{width: 540}}>Get Connected, wild adventures await you</span></a>
+                                         
+                                    <h2 className="heading"><br/>Ancestor Timeline Evolutions & Skins</h2>
+
+                                    
+                                </div>
                 </div>
             </div>
         </section>
