@@ -120,8 +120,8 @@ function TreeOfLife() {
         <div className='row' style={{marginTop: 200, marginBottom: 200}}>
         { generationId ?
           leoImages.map( (leoImage, idx) =>(
-            <div className='col-md-4'>
-              <img key={idx} src={leoImage?.url} style={{width: "420px", height:"420px"}} alt='generations'/>
+            <div className='col-md-4' key={idx} >
+              <img src={leoImage?.url} style={{width: "420px", height:"420px"}} alt='generations'/>
             </div>
           )) 
           : 
