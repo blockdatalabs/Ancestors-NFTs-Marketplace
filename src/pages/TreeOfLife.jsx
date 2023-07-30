@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import InitImage from '../assets/images/tree/init-golem.jpg'
 import Footer from '../components/footer/Footer';
 import axios from 'axios';
-import Banner from '../components/banner/Banner';
 
 function TreeOfLife() {
   const [message, setMessage] = useState('');
@@ -20,15 +19,15 @@ function TreeOfLife() {
         authorization: 'Bearer ' + process.env.REACT_APP_LEONARDO_API,
       },
       data: {
-        prompt: "One Stylized Mecha Golem Character, glowing runes "+message,
-        modelId: process.env.REACT_APP_LEONARDO_RUSTACEANS_MODEL,
+        prompt: "Mecha Golem Character "+message,
+        modelId: "b820ea11-02bf-4652-97ae-9ac0cc00593d",
         sd_version: 'v1_5',
         num_images: 3,
         width: 768,
         height: 768,
         guidance_scale: 11,
         init_generation_image_id: process.env.REACT_APP_LEONARDO_INIT_IMAGE_V1,
-        init_strength: 0.08
+        init_strength: 0.32
       }
     };
   
@@ -112,7 +111,7 @@ function TreeOfLife() {
           <br />
           <br />
           
-          <h2>{message}</h2>
+          <h5>{message}</h5>
         </form>
         <br />
         <br />
