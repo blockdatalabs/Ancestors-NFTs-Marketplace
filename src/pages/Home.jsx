@@ -4,6 +4,7 @@ import Roadmap from '../components/roadmap/Roadmap';
 import Banner from '../components/banner/Banner';
 import dataRoadMap from '../assets/data/data-roadmap';
 import Footer from '../components/footer/Footer';
+import Evolutions from '../components/Evolutions/Evolutions';
 
 
 function Home(props) {
@@ -11,6 +12,8 @@ function Home(props) {
         <div className='home-3 wrapper'>
           
         <Banner />
+        
+        <Evolutions />
         
         <Roadmap data={dataRoadMap} />
 

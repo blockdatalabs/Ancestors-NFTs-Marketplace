@@ -80,7 +80,7 @@ function TreeOfLife() {
         <br/>
         <br/>
         <br/>
-          <h2>Init Image: <img src={InitImage} alt='Mecha Golem' style={{width: "380px", height:"380px"}} /></h2>
+          <h2>Init Image: <img src={InitImage} alt='Mecha Golem' style={{width: "380px", height:"380px", borderRadius: 40}} /></h2>
         </div>
         <br />
         <br />
@@ -116,17 +116,34 @@ function TreeOfLife() {
         <br />
         <br />
       </div>
-        <div className='row' style={{marginTop: 200, marginBottom: 200}}>
-        { generationId ?
-          leoImages.map( (leoImage, idx) =>(
-            <div className='col-md-4' key={idx} >
-              <img src={leoImage?.url} style={{width: "420px", height:"420px"}} alt='generations'/>
-            </div>
-          )) 
-          : 
-          <h4>Submit, wait and get the results</h4>
-        }
-        </div>
+      <div className='row' style={{marginTop: 80, marginBottom: 80}}>
+                { generationId ?
+                <> 
+                    <div className='row'>
+                        <div className='col-md-4'>
+                        </div>
+                        <div className='col-md-4'>
+                            <h2>Evolutions:</h2>
+                            <br />
+                            <br />
+                        </div>
+                        <div className='col-md-4'>
+                        </div>
+                    </div>
+                    
+                    {leoImages.map( (leoImage, idx) =>(
+                        <>
+                        <div className='col-md-4' key={idx} >
+                        <h2>Gen {idx + 1}</h2>
+                        <img src={leoImage?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
+                        </div>
+                        </>
+                    ))} 
+                </>
+                        : 
+                        <h4>Submit, wait and get the species evolutions</h4>
+                    }
+                </div>
         <div className="block-text">
                                     <h3 className="heading">Join us for great 
                                           Events and alphas<br/>

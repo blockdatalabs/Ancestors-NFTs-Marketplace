@@ -11,9 +11,9 @@ function Banner(props) {
                             <div className="banner__left">
                                 <div className="block-text">
                                     <h2 className="heading">Create and Collect <br />
-                                        Trees of Life <span>NFTs</span> <br />
-                                        Infinity possibilities</h2>
-                                    <h1 className="heading">Ancestor Marketplace Timeline of Evolutions</h1>
+                                        Trees of Life<br />
+                                        Infinity possibilities <br /> <span>Only the choosen Step Up</span> </h2>
+                                    <h1 className="heading">Ancestor Collectibles Timeline: Evolutions  & Skins</h1>
 
                                     <a href="https://discord.com/invite/4mXg6QSyY8" className="action-btn"><span>Get Connected</span></a>
                                 </div>
