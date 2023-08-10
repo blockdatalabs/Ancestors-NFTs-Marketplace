@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import InitImage from '../../assets/images/tree/init-golem.jpg';
+import InitImage from '../../assets/images/tree/init-mecha.jpg';
 import Skins from '../../assets/images/tree/skins.png';
 import axios from 'axios';
 import ImagesGens from '../../assets/data/imagesGens.json';
@@ -8,63 +8,29 @@ import Gen2 from '../../assets/images/tree/gen2.jpg';
 import Gen3 from '../../assets/images/tree/gen3.jpg';
 
 function Evolutions(){
-    const [message, setMessage] = useState('');
-    const [ generationId, setGenerationId ] = useState('');
+    const [query, setQuery] = useState('');
+    const [ generation, setGeneration ] = useState([]);
     const [leoImages, setLeoImages] = useState([])
     const handleSubmit = (event) => {
       event.preventDefault();
-      let options = {
-        method: 'POST',
-        url: 'https://cloud.leonardo.ai/api/rest/v1/generations',
-        headers: {
-          accept: 'application/json',
-          'content-type': 'application/json',
-          authorization: 'Bearer ' + process.env.REACT_APP_LEONARDO_API,
-        },
-        data: {
-          prompt: "Mecha Golem Character "+message,
-          modelId: "b820ea11-02bf-4652-97ae-9ac0cc00593d",
-          sd_version: 'v1_5',
-          num_images: 3,
-          width: 768,
-          height: 768,
-          guidance_scale: 11,
-          init_generation_image_id: process.env.REACT_APP_LEONARDO_INIT_IMAGE_V1,
-          init_strength: 0.32
-        }
-      };
-    
-      if(message !== undefined){
-        axios
-        .request(options)
-        .then(function (response) {
-          setGenerationId(response.data.sdGenerationJob.generationId)
-        })
-        .catch(function (error) {
-          console.error(error);
-          setGenerationId('')
-        });
-      }
+
+
+        // The base URL for our API
+        const url = "https://serverless-api-leonardo.pulsarforge.workers.dev"
+      
+        const resp = fetch(url, {
+          // Send a POST request
+          method: "POST",
+          // With a JSON-stringified body containing the query from our input
+          body: JSON.stringify({ query }),
+          // Set the `Content-type` header so our API knows that the request
+          // is sending JSON
+          headers: { 'Content-type': 'application/json' }
+        })  
+        .then(response => setGeneration(response))
+        .catch(err => setGeneration(''));
     };
-  
-    useEffect(() => {
-      if(generationId !== ''){
-        const optionsGeneration = {
-          method: 'GET',
-          url: 'https://cloud.leonardo.ai/api/rest/v1/generations/' + generationId,
-          headers: {accept: 'application/json', authorization: 'Bearer ' + process.env.REACT_APP_LEONARDO_API}
-        };
-        setTimeout(() => {
-        axios.request(optionsGeneration)
-          .then(function (response) {
-            setLeoImages(response?.data.generations_by_pk.generated_images)
-          })
-          .catch(function (error) {
-            console.error(error);
-          });
-          }, 14000);
-        }
-      });
+
     return(
         <section className="banner">
             <div className="container big">
@@ -81,16 +47,16 @@ function Evolutions(){
                     </div>
                     <div className='col-md-8'> 
                         <h2> <br /> Evolve them </h2>
-                        <form className="form-group">
+                        <form onSubmit={handleSubmit} className="form-group">
                         <input
                             type="text"
                             className="form-control"
-                            id="message"
-                            name="message"
-                            value={message}
+                            id="query"
+                            name="query"
+                            value={query}
                             placeholder="Your Prompt"
                             onChange={(event) =>
-                                setMessage(event.target.value)
+                              setQuery(event.target.value)
                             }
                             style={{width: 400}}
                         />
@@ -103,17 +69,48 @@ function Evolutions(){
                         <br />
                         <br />
 
-                        <h4 style={{fontSize: 30}}>Mecha Golem Character Beast wearing fashion jackets, jeans and elegant shoes with glowing runes humanoid robot style, blade arms, wheel legs, photorealistic</h4>
+                        <h4 style={{fontSize: 30}}>3d vray render, raytracing, knight helmet head, mecha stylized character wearing clothing and fabrics with glowing and blooming lights and runes, knights with sword and shield, protector, vfx light effect lines over the body, background space</h4>
                         </form>
                     </div>
                 </div>
                 <div className='row' style={{marginTop: 80, marginBottom: 80}}>
-
+                { generation ?
+                <> 
                     <div className='row'>
                         <div className='col-md-4'>
                         </div>
                         <div className='col-md-4'>
-                            <h2>Evolutions</h2>
+                            <h2>Evolutions:</h2>
+                            <br />
+                            <br />
+                        </div>
+                        <div className='col-md-4'>
+                        </div>
+                    </div>
+                    
+                    {generation.map( (leoImage) =>(
+                        leoImage[1].generated_images.map( 
+                            (leoGenerate, idx) => {
+                        <>
+                        <div className='col-md-4' key={idx} >
+                        <h2>Gen {idx + 1}</h2>
+                        <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
+                        </div>
+                        </>
+                    })))} 
+                </>
+                : 
+                <h4>Submit, wait and get the species evolutions</h4>
+              }
+                    <div className='row'>
+                        <div className='col-md-4'>
+                        </div>
+                        <div className='col-md-4'>
+                        <br />
+                            <br />
+                            <br />
+                            <br />
+                            <h2>Example: Evolutions</h2>
                             <br />
                             <br />
                         </div>
@@ -156,7 +153,7 @@ function Evolutions(){
                         <div className='col-md-8'>
                             <br />
                             <br />
-                            <img src={Skins} alt='skins of one evolution' style={{width: "100%"}} />
+                            <img src={Skins} alt='skins of one evolution' style={{width: "100%", borderRadius: 40}} />
                         </div>
                         <div className='col-md-2'>
                     </div>
