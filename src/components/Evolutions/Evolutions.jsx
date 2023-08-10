@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import InitImage from '../../assets/images/tree/init-mecha.jpg';
 import Skins from '../../assets/images/tree/skins.png';
-import axios from 'axios';
-import ImagesGens from '../../assets/data/imagesGens.json';
 import Gen1 from '../../assets/images/tree/gen1.jpg';
 import Gen2 from '../../assets/images/tree/gen2.jpg';
 import Gen3 from '../../assets/images/tree/gen3.jpg';
@@ -10,7 +8,6 @@ import Gen3 from '../../assets/images/tree/gen3.jpg';
 function Evolutions(){
     const [query, setQuery] = useState('');
     const [ generation, setGeneration ] = useState([]);
-    const [leoImages, setLeoImages] = useState([])
     const handleSubmit = (event) => {
       event.preventDefault();
 
@@ -18,7 +15,7 @@ function Evolutions(){
         // The base URL for our API
         const url = "https://serverless-api-leonardo.pulsarforge.workers.dev"
       
-        const resp = fetch(url, {
+        fetch(url, {
           // Send a POST request
           method: "POST",
           // With a JSON-stringified body containing the query from our input
@@ -89,15 +86,18 @@ function Evolutions(){
                     </div>
                     
                     {generation.map( (leoImage) =>(
-                        leoImage[1].generated_images.map( 
-                            (leoGenerate, idx) => {
-                        <>
-                        <div className='col-md-4' key={idx} >
-                        <h2>Gen {idx + 1}</h2>
-                        <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
-                        </div>
-                        </>
-                    })))} 
+                        <div key={leoImage[1]}>
+                        {leoImage[1].generated_images.map( 
+                            (leoGenerate, idx) => (
+                            <>
+                                <div className='col-md-4' key={idx} >
+                                <h2>Gen {idx + 1}</h2>
+                                <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
+                                </div>
+                            </>
+                        ))}
+                    </div>
+                    ))} 
                 </>
                 : 
                 <h4>Submit, wait and get the species evolutions</h4>
