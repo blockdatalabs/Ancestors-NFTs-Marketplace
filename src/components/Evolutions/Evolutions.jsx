@@ -87,7 +87,7 @@ function Evolutions(){
                         </div>
                     </div>
                     
-                    {generation.generations.map( (leoImage) =>(
+                    {generation.map( (leoImage) =>(
                         <div key={leoImage[1]}>
                         {leoImage[1].generated_images.map( 
                             (leoGenerate, idx) => (
