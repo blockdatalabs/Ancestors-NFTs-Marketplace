@@ -13,7 +13,7 @@ function Evolutions(){
 
 
         // The base URL for our API
-        const url = "https://serverless-api-leonardo.pulsarforge.workers.dev"
+        const url = "https://ancestors.pulsarforge.io/apileo";
       
         fetch(url, {
           // Send a POST request
@@ -25,6 +25,7 @@ function Evolutions(){
           headers: { 'Content-type': 'application/json' }
         })  
         .then(response => setGeneration(response))
+        .then(response => console.log(response))
         .catch(err => setGeneration(''));
     };
 
