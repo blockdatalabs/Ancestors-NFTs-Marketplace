@@ -25,7 +25,7 @@ function Evolutions(){
           headers: { 'Content-type': 'application/json' }
         })  
         .then(response => setGeneration(response))
-        .then(response => console.log(response))
+        .then(response => console.log("GENERATION", generation))
         .then((response) => console.log("RESPONSE",response))
         .catch(err => setGeneration(''));
     };
