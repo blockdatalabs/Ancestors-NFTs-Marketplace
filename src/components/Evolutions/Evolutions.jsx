@@ -24,6 +24,7 @@ function Evolutions(){
           // is sending JSON
           headers: { 'Content-type': 'application/json' }
         })  
+        .then(response => response.json())
         .then(response => setGeneration(response))
         .then(response => console.log("GENERATION", generation))
         .then((response) => console.log("RESPONSE",response))
