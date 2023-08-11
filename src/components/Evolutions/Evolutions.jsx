@@ -26,6 +26,7 @@ function Evolutions(){
         })  
         .then(response => setGeneration(response))
         .then(response => console.log(response))
+        .then((response) => console.log("RESPONSE",response))
         .catch(err => setGeneration(''));
     };
 
@@ -86,7 +87,7 @@ function Evolutions(){
                         </div>
                     </div>
                     
-                    {generation.map( (leoImage) =>(
+                    {generation.generations.map( (leoImage) =>(
                         <div key={leoImage[1]}>
                         {leoImage[1].generated_images.map( 
                             (leoGenerate, idx) => (
