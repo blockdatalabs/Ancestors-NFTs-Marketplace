@@ -7,7 +7,7 @@ import Gen3 from '../../assets/images/tree/gen3.jpg';
 
 function Evolutions(){
     const [query, setQuery] = useState('');
-    const [ generation, setGeneration ] = useState({});
+    const [ generation, setGeneration ] = useState([]);
     const handleSubmit = (event) => {
       event.preventDefault();
 
@@ -25,7 +25,7 @@ function Evolutions(){
           headers: { 'Content-type': 'application/json' }
         })  
         .then(response => response.json())
-        .then(response => setGeneration(response))
+        .then(response => setGeneration(response.generations))
         .then(response => console.log("GENERATION", generation))
         .then((response) => console.log("RESPONSE",response))
         .catch(err => setGeneration(''));
@@ -74,7 +74,7 @@ function Evolutions(){
                     </div>
                 </div>
                 <div className='row' style={{marginTop: 80, marginBottom: 80}}>
-                { generation !== {} ?
+                { generation ?
                 <> 
                     <div className='row'>
                         <div className='col-md-4'>
