@@ -7,7 +7,7 @@ import Gen3 from '../../assets/images/tree/gen3.jpg';
 
 function Evolutions(){
     const [query, setQuery] = useState('');
-    const [ generation, setGeneration ] = useState();
+    const [ generation, setGeneration ] = useState([]);
     const handleSubmit = (event) => {
       event.preventDefault();
 
@@ -20,7 +20,7 @@ function Evolutions(){
           body: JSON.stringify({ query }),
           headers: { 'Content-type': 'application/json' }
         })  
-        .then(response => response.json())
+        .then(response => response)
         .catch(err => console.log(err));
 
         const urlImages = "https://ancestors.pulsarforge.io/api/images";
@@ -29,7 +29,8 @@ function Evolutions(){
           method: "GET",
           headers: { 'Content-type': 'application/json' }
         })  
-        .then(response => setGeneration(response.json()))
+        .then(response => setGeneration(response?.generations))
+        .then(response => console.log(response))
         .catch(err => console.log(err));
     };
     return(
