@@ -16,12 +16,8 @@ function Evolutions(){
         const url = "https://ancestors.pulsarforge.io/api";
       
         fetch(url, {
-          // Send a POST request
           method: "POST",
-          // With a JSON-stringified body containing the query from our input
           body: JSON.stringify({ query }),
-          // Set the `Content-type` header so our API knows that the request
-          // is sending JSON
           headers: { 'Content-type': 'application/json' }
         })  
         .then(response => response.json())
@@ -30,15 +26,12 @@ function Evolutions(){
         const urlImages = "https://ancestors.pulsarforge.io/api/images";
       
         fetch(urlImages, {
-          // Send a POST request
           method: "GET",
-          // With a JSON-stringified body containing the query from our input
-          // Set the `Content-type` header so our API knows that the request
-          // is sending JSON
           headers: { 'Content-type': 'application/json' }
         })  
         .then(response => response.json())
-        .catch(err => setGeneration([]));
+        .then(response => setGeneration(response.generations))
+        .catch(err => console.log(err));
     };
     return(
         <section className="banner">
