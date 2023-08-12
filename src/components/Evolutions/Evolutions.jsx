@@ -7,7 +7,7 @@ import Gen3 from '../../assets/images/tree/gen3.jpg';
 
 function Evolutions(){
     const [query, setQuery] = useState('');
-    const [ generation, setGeneration ] = useState([]);
+    const [ generation, setGeneration ] = useState();
     const handleSubmit = (event) => {
       event.preventDefault();
 
@@ -29,8 +29,7 @@ function Evolutions(){
           method: "GET",
           headers: { 'Content-type': 'application/json' }
         })  
-        .then(response => response.json())
-        .then(response => setGeneration(response.generations))
+        .then(response => setGeneration(response.json()))
         .catch(err => console.log(err));
     };
     return(
@@ -90,7 +89,7 @@ function Evolutions(){
                         </div>
                     </div>
                     
-                    {generation.map( (leoImage) =>(
+                    {generation.generations.map( (leoImage) =>(
                         <div key={leoImage[1]}>
                         {leoImage[1].generated_images.map( 
                             (leoGenerate, idx) => (
