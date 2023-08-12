@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import InitImage from '../../assets/images/tree/init-mecha.jpg';
 import Skins from '../../assets/images/tree/skins.png';
 import Gen1 from '../../assets/images/tree/gen1.jpg';
@@ -25,12 +25,21 @@ function Evolutions(){
           headers: { 'Content-type': 'application/json' }
         })  
         .then(response => response.json())
-        .then(response => setGeneration(response.generations))
-        .then(response => console.log("GENERATION", generation))
-        .then((response) => console.log("RESPONSE",response))
-        .catch(err => setGeneration(''));
-    };
+        .catch(err => console.log(err));
 
+        const urlImages = "https://ancestors.pulsarforge.io/api/images";
+      
+        fetch(urlImages, {
+          // Send a POST request
+          method: "GET",
+          // With a JSON-stringified body containing the query from our input
+          // Set the `Content-type` header so our API knows that the request
+          // is sending JSON
+          headers: { 'Content-type': 'application/json' }
+        })  
+        .then(response => response.json())
+        .catch(err => setGeneration([]));
+    };
     return(
         <section className="banner">
             <div className="container big">
