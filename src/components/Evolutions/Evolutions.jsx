@@ -86,15 +86,17 @@ function Evolutions(){
                 { generation ?
                 <> 
                     <div className='row'>
-                        <div className='col-md-4'>
+                        <div className='col-md-2'>
                         </div>
-                        <div className='col-md-4'>
+                        <div className='col-md-8'>
                             <h4>Discover previous Evolutions</h4>
+                            <br />
+                            <br />
                             <h4>Sent next Evolutions</h4>
                             <br />
                             <br />
                         </div>
-                        <div className='col-md-4'>
+                        <div className='col-md-2'>
                         </div>
                     </div>
                     
@@ -107,7 +109,7 @@ function Evolutions(){
                                 <div className='col-md-4' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
                                 <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
-                                <h3>Previous Creator Prompt{leoImage.prompt}</h3>
+                                <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
                         ))}
