@@ -5,10 +5,20 @@ import Gen1 from '../../assets/images/tree/gen1.jpg';
 import Gen2 from '../../assets/images/tree/gen2.jpg';
 import Gen3 from '../../assets/images/tree/gen3.jpg';
 
+const getImages = async () => {
+    const urlImages = "https://ancestors.pulsarforge.io/api/images";
+    const resp = await fetch(urlImages, {
+        method: "GET",
+        headers: { 'Content-type': 'application/json' }
+      })
+
+    return resp.json()
+}
+
 function Evolutions(){
     const [query, setQuery] = useState('');
     const [ generation, setGeneration ] = useState([]);
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
       event.preventDefault();
 
 
@@ -18,20 +28,15 @@ function Evolutions(){
         fetch(url, {
           method: "POST",
           body: JSON.stringify({ query }),
-          headers: { 'Content-type': 'application/json' }
+          headers: { "accept": "application/json", 'Content-type': 'application/json' }
         })  
         .then(response => response)
         .catch(err => console.log(err));
 
-        const urlImages = "https://ancestors.pulsarforge.io/api/images";
+        const results = await getImages();
+        setGeneration(results);
       
-        fetch(urlImages, {
-          method: "GET",
-          headers: { 'Content-type': 'application/json' }
-        })  
-        .then(response => setGeneration(response?.generations))
-        .then(response => console.log(response))
-        .catch(err => console.log(err));
+
     };
     return(
         <section className="banner">
