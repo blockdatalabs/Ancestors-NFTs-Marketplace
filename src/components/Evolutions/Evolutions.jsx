@@ -34,10 +34,12 @@ function Evolutions(){
         .catch(err => console.log(err));
 
         const results = await getImages();
-        setGeneration(results);
+        setGeneration(results?.generations);
       
 
     };
+
+    console.log("GENERATION", generation);
     return(
         <section className="banner">
             <div className="container big">
