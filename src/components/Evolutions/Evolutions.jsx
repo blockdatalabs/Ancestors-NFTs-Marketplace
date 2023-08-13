@@ -108,7 +108,7 @@ function Evolutions(){
                             <>
                                 <div className='col-md-6' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "720px", height:"720px", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
@@ -126,7 +126,7 @@ function Evolutions(){
                             <>
                                 <div className='col-md-6' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "720px", height:"720px", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
@@ -144,7 +144,7 @@ function Evolutions(){
                             <>
                                 <div className='col-md-6' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "720px", height:"720px", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
