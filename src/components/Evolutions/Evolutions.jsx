@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InitImage from '../../assets/images/tree/init-mecha.jpg';
+import InitImage from '../../assets/images/tree/init-mecha-v1.jpg';
 import Skins from '../../assets/images/tree/skins.png';
 import Gen1 from '../../assets/images/tree/gen1.jpg';
 import Gen2 from '../../assets/images/tree/gen2.jpg';
@@ -52,7 +52,7 @@ function Evolutions(){
                         <h2>Init Image: </h2>
                         <br/>
                         <br/>
-                        <img src={InitImage} alt='Mecha Golem' style={{width: "380px", height:"380px", borderRadius: 40}} />
+                        <img src={InitImage} alt='Mecha Golem' style={{width: "512px", height:"384px", borderRadius: 40}} />
                     </div>
                     <div className='col-md-8'> 
                         <h2> <br /> Evolve them </h2>
@@ -78,7 +78,10 @@ function Evolutions(){
                         <br />
                         <br />
 
-                        <h4 style={{fontSize: 30}}>Mecha character with sword and shield, golem knight  earth protector, polygonal, front view, glowing blooming green light runes, smooth soft stylized art, 3d, summer vibes, vray render.</h4>
+                        <h4 style={{fontSize: 30}}>Mecha character with sword and shield, golem knight  earth protector, polygonal, front view, glowing blooming green light runes, smooth soft stylized art, 3d, summer vibes, vray render</h4>
+                        <br />
+
+                        <h2>Sent next Evolutions</h2 >
                         </form>
                     </div>
                 </div>
@@ -86,17 +89,14 @@ function Evolutions(){
                 { generation ?
                 <> 
                     <div className='row'>
-                        <div className='col-md-2'>
+                        <div className='col-md-3'>
                         </div>
-                        <div className='col-md-8'>
-                            <h4>Discover previous Evolutions</h4>
-                            <br />
-                            <br />
-                            <h4>Sent next Evolutions</h4>
+                        <div className='col-md-6'>
+                            <h4>Discover previous Evolutions:</h4>
                             <br />
                             <br />
                         </div>
-                        <div className='col-md-2'>
+                        <div className='col-md-3'>
                         </div>
                     </div>
                     <div className='row'>
@@ -167,7 +167,7 @@ function Evolutions(){
                             <br />
                             <br />
                             <br />
-                            <h2>Example: Evolutions</h2>
+                            <h4>Examples:</h4>
                             <br />
                             <br />
                         </div>
