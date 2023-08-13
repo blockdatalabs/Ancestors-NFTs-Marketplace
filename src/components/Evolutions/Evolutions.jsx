@@ -89,8 +89,8 @@ function Evolutions(){
                         <div className='col-md-4'>
                         </div>
                         <div className='col-md-4'>
-                            <h2>Discover previous Evolutions</h2>
-                            <h2>Sent next Evolutions</h2>
+                            <h4>Discover previous Evolutions</h4>
+                            <h4>Sent next Evolutions</h4>
                             <br />
                             <br />
                         </div>
@@ -107,11 +107,11 @@ function Evolutions(){
                                 <div className='col-md-4' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
                                 <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
-
+                                <h3>Previous Creator Prompt{leoImage.prompt}</h3>
                                 </div>
                             </>
                         ))}
-                        <h3>Previous Creator Prompt{leoImage[1].prompt}</h3>
+                        
                         </div>
                         )
                     ))} 
