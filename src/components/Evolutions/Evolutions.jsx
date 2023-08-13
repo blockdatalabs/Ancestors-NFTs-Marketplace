@@ -99,7 +99,7 @@ function Evolutions(){
                     
                     {generation.map( (leoImage, index) =>(
                         index === 1 && (
-                        <div key={index}>
+                        <div className='row' key={index}>
                         {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
