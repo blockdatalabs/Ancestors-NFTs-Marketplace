@@ -98,8 +98,9 @@ function Evolutions(){
                     </div>
                     
                     {generation.map( (leoImage, index) =>(
-                        index === 1 && (
                         <div key={index}>
+                        {index === 1 && (
+                        <div>
                         {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
@@ -109,6 +110,8 @@ function Evolutions(){
                                 </div>
                             </>
                         ))}
+                        </div>
+                        )}
                     </div>
                     ))} 
                 </>
