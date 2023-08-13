@@ -102,11 +102,11 @@ function Evolutions(){
                     <div className='row'>
                     {generation.map( (leoImage, index) =>(
                         index === 1 && (
-                        <div key={index}>
+                        <div className='row' key={index}>
                         {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
-                                <div className='col-md-2' key={idx} >
+                                <div className='col-md-6' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
                                 <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
@@ -120,11 +120,11 @@ function Evolutions(){
                     ))} 
                     {generation.map( (leoImage, index) =>(
                         index === 2 && (
-                        <div key={index}>
+                        <div className='row' key={index}>
                         {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
-                                <div className='col-md-2' key={idx} >
+                                <div className='col-md-6' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
                                 <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
@@ -138,11 +138,11 @@ function Evolutions(){
                     ))} 
                     {generation.map( (leoImage, index) =>(
                         index === 3 && (
-                        <div key={index}>
+                        <div className='row' key={index}>
                         {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
-                                <div className='col-md-2' key={idx} >
+                                <div className='col-md-6' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
                                 <img src={leoGenerate?.url} style={{width: "420px", height:"420px", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
