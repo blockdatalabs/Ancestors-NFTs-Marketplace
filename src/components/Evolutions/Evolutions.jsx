@@ -78,7 +78,7 @@ function Evolutions(){
                         <br />
                         <br />
 
-                        <h4 style={{fontSize: 30}}>3d vray render, raytracing, knight helmet head, mecha stylized character wearing clothing and fabrics with glowing and blooming lights and runes, knights with sword and shield, protector, vfx light effect lines over the body, background space</h4>
+                        <h4 style={{fontSize: 30}}>Mecha character with sword and shield, golem knight  earth protector, polygonal, front view, glowing blooming green light runes, smooth soft stylized art, 3d, summer vibes, vray render.</h4>
                         </form>
                     </div>
                 </div>
@@ -106,9 +106,9 @@ function Evolutions(){
                         {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
-                                <div className='col-md-6' key={idx} >
+                                <div className='col-md-4' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "720px", height:"720px", borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "auto", height:"auto", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
@@ -124,9 +124,9 @@ function Evolutions(){
                         {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
-                                <div className='col-md-6' key={idx} >
+                                <div className='col-md-4' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "720px", height:"720px", borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "auto", height:"auto", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
@@ -142,9 +142,9 @@ function Evolutions(){
                         {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
-                                <div className='col-md-6' key={idx} >
+                                <div className='col-md-4' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "720px", height:"720px", borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "auto", height:"auto", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
