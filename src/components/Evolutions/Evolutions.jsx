@@ -78,7 +78,7 @@ function Evolutions(){
                         <br />
                         <br />
 
-                        <h4 style={{fontSize: 30}}>Mecha character with sword and shield, golem knight  earth protector, polygonal, front view, glowing blooming green light runes, smooth soft stylized art, 3d, summer vibes, vray render</h4>
+                        <h4 style={{fontSize: 30}}>Knight protector, polygonal, front view, glowing blooming colors light runes, wearing stylized clothing, 3d, spring vibes, vray render</h4>
                         <br />
 
                         <h2>Sent next Evolutions</h2 >
