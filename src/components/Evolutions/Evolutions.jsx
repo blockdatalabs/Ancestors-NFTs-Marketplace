@@ -12,13 +12,13 @@ const getImages = async () => {
         headers: { 'Content-type': 'application/json' }
       })
 
-    return resp.json()
+    return resp.json();
 }
 
 function Evolutions(){
     const [query, setQuery] = useState('');
     const [ generation, setGeneration ] = useState([]);
-    const handleSubmit = async (event) => {
+    const handleSubmit =  (event) => {
       event.preventDefault();
 
 
@@ -33,7 +33,7 @@ function Evolutions(){
         .then(response => response)
         .catch(err => console.log(err));
 
-        const results = await getImages();
+        const results = getImages();
         setGeneration(results?.generations);
       
 
@@ -97,9 +97,10 @@ function Evolutions(){
                         </div>
                     </div>
                     
-                    {generation.map( (leoImage) =>(
-                        <div key={leoImage[1]}>
-                        {leoImage[1].generated_images.map( 
+                    {generation.map( (leoImage, index) =>(
+                        index === 1 && (
+                        <div key={index}>
+                        {leoImage.generated_images.map( 
                             (leoGenerate, idx) => (
                             <>
                                 <div className='col-md-4' key={idx} >
