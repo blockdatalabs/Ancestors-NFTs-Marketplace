@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import InitImage from '../../assets/images/tree/init-mecha-v1.jpg';
 import Skins from '../../assets/images/tree/skins.png';
 import Gen1 from '../../assets/images/tree/gen1.jpg';
 import Gen2 from '../../assets/images/tree/gen2.jpg';
 import Gen3 from '../../assets/images/tree/gen3.jpg';
+import CreativeMode from '../../assets/images/tree/unlock-creative-mode.png';
+import { sequence } from "0xsequence";
 
 const getImages = async () => {
     const urlImages = "https://ancestors.pulsarforge.io/api/images";
@@ -15,9 +17,12 @@ const getImages = async () => {
     return resp.json();
 }
 
+
+
 function Evolutions(){
     const [query, setQuery] = useState('');
     const [ generation, setGeneration ] = useState([]);
+    const [currentAccount, setCurrentAccount] = useState('');
     const handleSubmit = async (event) => {
       event.preventDefault();
 
@@ -39,16 +44,41 @@ function Evolutions(){
 
     };
 
-    console.log("GENERATION", generation);
+    sequence.initWallet({ defaultNetwork: 'polygon' })
+    const openWallet = async () => {
+        const wallet = sequence.getWallet();
+        const connectDetails = await wallet.connect({
+            app: "Ancestors Trees of Life",
+            authorize: true,
+            settings: {
+              theme: "light",
+              bannerUrl: "https://ancestors.pulsarforge.io/logo.png",
+              includedPaymentProviders: ["moonpay", "ramp"],
+              defaultFundingCurrency: "matic",
+              lockFundingCurrencyToDefault: false,
+            },
+          });
+          setCurrentAccount(connectDetails.session.accountAddress)
+        wallet.openWallet();
+      }
     return(
         <section className="banner">
             <div className="container big">
                 <div className="row">
                     <h2> <br/> <br/> Tree of Life calling World Builders <br/> <br/> </h2>
+                    { currentAccount === '' ? 
+                    (<>
+                    <button type="submit" style={{color: "blue", width: 440, height: 60, borderRadius: 40}} shape="square" onClick={() => openWallet()} label="Open Wallet"> Connect wallet & Unlock Creative Mode </button>
+                    
+                    <img src={CreativeMode} style={{border: "solid 8px", borderRadius: 40, marginTop: 40}} alt='creative mode' />
+                    </>
+                    ):(
+                    <>
                     <div className='col-md-4'>
                         <br/>
                         <br/>
                         <br/>
+                        <h4>Wallet Connected</h4>
                         <h2>Init Image: </h2>
                         <br/>
                         <br/>
@@ -84,6 +114,7 @@ function Evolutions(){
                         <h2>Sent next Evolutions</h2 >
                         </form>
                     </div>
+                    </>)}
                 </div>
                 <div className='row' style={{marginTop: 80, marginBottom: 80}}>
                 { generation ?
