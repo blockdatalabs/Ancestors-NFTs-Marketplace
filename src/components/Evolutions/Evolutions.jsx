@@ -115,6 +115,46 @@ function Evolutions(){
                         </form>
                     </div>
                     </>)}
+                    <div className='col-md-4'>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h4>Wallet Connected</h4>
+                        <h2>Init Image: </h2>
+                        <br/>
+                        <br/>
+                        <img src={InitImage} alt='Mecha Golem' style={{width: "512px", height:"384px", borderRadius: 40}} />
+                    </div>
+                    <div className='col-md-8'> 
+                        <h2> <br /> Evolve them </h2>
+                        <form onSubmit={handleSubmit} className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="query"
+                            name="query"
+                            value={query}
+                            placeholder="Your Prompt"
+                            onChange={(event) =>
+                              setQuery(event.target.value)
+                            }
+                            style={{width: 400}}
+                        />
+
+                        <br />
+                        <br />
+
+                        <button type="submit" className="btn btn-primary">Evolve them</button>
+
+                        <br />
+                        <br />
+
+                        <h4 style={{fontSize: 30}}>Knight protector, polygonal, front view, glowing blooming colors light runes, wearing stylized clothing, 3d, spring vibes, vray render</h4>
+                        <br />
+
+                        <h2>Sent next Evolutions</h2 >
+                        </form>
+                    </div>
                 </div>
                 <div className='row' style={{marginTop: 80, marginBottom: 80}}>
                 { generation ?
