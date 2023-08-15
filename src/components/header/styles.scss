@@ -15,11 +15,10 @@
 
     &.is-fixed {
         position: fixed;
-        background: #070A29;
+        background: #fbff0027;
         
         top: 0;
         transition: all 0.4s ease-in-out;
-        box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 30%);
 
 
         z-index: 9999;
@@ -33,6 +32,7 @@
 
     .header__body {
         @include flex(center,space-between);
+        background: transparent;
     }
 
     .header__right {
