@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import InitImage from '../../assets/images/tree/init-mecha-v1.jpg';
+import InitImage from '../../assets/images/tree/init-mecha-v2.jpg';
 import Skins from '../../assets/images/tree/skins.png';
-import Gen1 from '../../assets/images/tree/gen1.jpg';
-import Gen2 from '../../assets/images/tree/gen2.jpg';
-import Gen3 from '../../assets/images/tree/gen3.jpg';
+import Gen1 from '../../assets/images/tree/gen1_1.jpg';
+import Gen2 from '../../assets/images/tree/gen2_1.jpg';
+import Gen3 from '../../assets/images/tree/gen3_1.jpg';
 import CreativeMode from '../../assets/images/tree/unlock-creative-mode.png';
 import { sequence } from "0xsequence";
 
