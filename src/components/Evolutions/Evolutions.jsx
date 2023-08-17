@@ -43,7 +43,26 @@ function Evolutions(){
       
 
     };
-
+    const handleSubmitLeonardo = async (event) => {
+        event.preventDefault();
+  
+  
+          // The base URL for our API
+          const url = "https://ancestors.pulsarforge.io/api/diffusion";
+        
+          fetch(url, {
+            method: "POST",
+            body: JSON.stringify({ query }),
+            headers: { "accept": "application/json", 'Content-type': 'application/json' }
+          })  
+          .then(response => response)
+          .catch(err => console.log(err));
+  
+          const results = await getImages();
+          setGeneration(results?.generations);
+        
+  
+      };
     sequence.initWallet({ defaultNetwork: 'polygon' })
     const openWallet = async () => {
         const wallet = sequence.getWallet();
@@ -68,7 +87,7 @@ function Evolutions(){
                     <h2> <br/> <br/> Tree of Life calling World Builders <br/> <br/> </h2>
                     { currentAccount === '' ? 
                     (<>
-                    <button type="submit" style={{color: "blue", width: 440, height: 60, borderRadius: 40}} shape="square" onClick={() => openWallet()} label="Open Wallet"> Connect wallet & Unlock Creative Mode </button>
+                    <button type="submit" style={{color: "blue", width: 500, height: 60, borderRadius: 40}} shape="square" onClick={() => openWallet()} label="Open Wallet"> Connect wallet & Unlock SD XL Creative Mode </button>
                     
                     <img src={CreativeMode} style={{border: "solid 8px", borderRadius: 40, marginTop: 40}} alt='creative mode' />
                     </>
@@ -115,6 +134,46 @@ function Evolutions(){
                         </form>
                     </div>
                     </>)}
+                    <div className='col-md-4'>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h4>Diffusion Model</h4>
+                        <h2>Init Image: </h2>
+                        <br/>
+                        <br/>
+                        <img src={InitImage} alt='Mecha Golem' style={{width: "512px", height:"384px", borderRadius: 40}} />
+                    </div>
+                    <div className='col-md-8'> 
+                        <h2> <br /> Evolve them </h2>
+                        <form onSubmit={handleSubmitLeonardo} className="form-group">
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="query"
+                            name="query"
+                            value={query}
+                            placeholder="Your Prompt"
+                            onChange={(event) =>
+                              setQuery(event.target.value)
+                            }
+                            style={{width: 400}}
+                        />
+
+                        <br />
+                        <br />
+
+                        <button type="submit" className="btn btn-primary">Evolve them</button>
+
+                        <br />
+                        <br />
+
+                        <h4 style={{fontSize: 30}}>Knight protector, polygonal, front view, glowing blooming colors light runes, wearing stylized clothing, 3d, spring vibes, vray render</h4>
+                        <br />
+
+                        <h2>Sent next Evolutions</h2 >
+                        </form>
+                    </div>
                 </div>
                 <div className='row' style={{marginTop: 80, marginBottom: 80}}>
                 { generation ?
@@ -139,7 +198,7 @@ function Evolutions(){
                             <>
                                 <div className='col-md-4' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "512px", height:"384px", borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "512px", height:"512px", borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
@@ -157,7 +216,7 @@ function Evolutions(){
                             <>
                                 <div className='col-md-4' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "512px", height:"384px",  borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "512px", height:"512px",  borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
@@ -175,7 +234,7 @@ function Evolutions(){
                             <>
                                 <div className='col-md-4' key={idx} >
                                 <h2>Gen {idx + 1}</h2>
-                                <img src={leoGenerate?.url} style={{width: "512px", height:"384px",  borderRadius: 40}} alt='generations'/>
+                                <img src={leoGenerate?.url} style={{width: "512px", height:"512px",  borderRadius: 40}} alt='generations'/>
                                 <h5>Previous Creator Prompt: {leoImage.prompt}</h5>
                                 </div>
                             </>
