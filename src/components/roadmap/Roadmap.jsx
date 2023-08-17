@@ -8,6 +8,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
+import TreeOfLife from '../../assets/images/tree/tree-of-life.jpg';
 
 Roadmap.propTypes = {
     data: PropTypes.array
@@ -78,7 +79,10 @@ function Roadmap(props) {
                                 }
                             </Swiper>
 
-
+                                <div>
+                                    <h2>Tree of life</h2>
+                                    <img src={TreeOfLife} alt='tree of life' style={{ width: '1520px', borderRadius: 40}} />
+                                </div>
                                     
                                 </div>
 
