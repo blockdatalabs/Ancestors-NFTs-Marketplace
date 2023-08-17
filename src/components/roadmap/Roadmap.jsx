@@ -78,11 +78,6 @@ function Roadmap(props) {
                                     ))
                                 }
                             </Swiper>
-
-                                <div>
-                                    <h2>Tree of life</h2>
-                                    <img src={TreeOfLife} alt='tree of life' style={{ width: '1520px', borderRadius: 40}} />
-                                </div>
                                     
                                 </div>
 
