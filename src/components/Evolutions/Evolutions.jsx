@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InitImage from '../../assets/images/tree/init-mecha-v2.jpg';
-import Skins from '../../assets/images/tree/skins.png';
+import Skins from '../../assets/images/tree/skins.jpg';
 import Gen1 from '../../assets/images/tree/gen1_1.jpg';
 import Gen2 from '../../assets/images/tree/gen2_1.jpg';
 import Gen3 from '../../assets/images/tree/gen3_1.jpg';
