@@ -1,63 +1,63 @@
-import React , {useState ,useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import logo from '../../assets/images/logo/logo.png'
-
+import logo from "../../assets/images/logo/logo.png";
 
 function Footer(props) {
+  const [isVisible, setIsVisible] = useState(false);
 
-    const [isVisible, setIsVisible] = useState(false);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 500) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
-  
-    useEffect(() => {
-      const toggleVisibility = () => {
-        if (window.pageYOffset > 500) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      };
-  
-      window.addEventListener("scroll", toggleVisibility);
-  
-      return () => window.removeEventListener("scroll", toggleVisibility);
-    }, []);
 
-    return (
-        <footer className="footer">
-                
-                <div className="shape"></div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="footer__bottom">
-                                <Link to="/" className="logo"><img src={logo} alt="Ancestors" /></Link>
+    window.addEventListener("scroll", toggleVisibility);
 
-                                <div className="center mb--30">
-                                    <ul className="list">
-                                        <li><Link to="/">Evolution"s Home</Link></li>
-                                    </ul>
-                                    <p>Ancestors All Rights Reserved</p>
-                                </div>
-                            </div>
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
 
-                            
-                        </div>
-                    </div>
-                </div>
+  return (
+    <footer className="footer">
+      <div className="shape"></div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="footer__bottom">
+              <Link to="/" className="logo">
+                <img src={logo} alt="Ancestors" />
+              </Link>
 
-                {
-                isVisible && 
-                <Link to='#' onClick={scrollToTop}   id="scroll-top"><span className="icon-arrow-top"></span></Link>
-            }
-            </footer>
-    );
+              <div className="center mb--30">
+                <ul className="list">
+                  <li>
+                    <Link to="/">Evolution"s Home</Link>
+                  </li>
+                </ul>
+                <p>Ancestors All Rights Reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {isVisible && (
+        <Link to="#" onClick={scrollToTop} id="scroll-top">
+          <span className="icon-arrow-top"></span>
+        </Link>
+      )}
+    </footer>
+  );
 }
 
 export default Footer;

@@ -1,9 +1,9 @@
 const menus = [
-    {
-        id: 1,
-        name: 'Evolution"s Home',
-        links: '/',
-    }
-]
+  {
+    id: 1,
+    name: 'Evolution"s Home',
+    links: "/",
+  },
+];
 
 export default menus;
