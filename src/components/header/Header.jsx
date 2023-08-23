@@ -86,10 +86,10 @@ const Header = () => {
 
               <div className="header__action">
                 <a
-                  href="https://discord.com/invite/4mXg6QSyY8"
+                  href="https://pulsarforge.substack.com/"
                   className="action-btn"
                 >
-                  <span>Join Now</span>
+                  <span>Newsletter</span>
                 </a>
               </div>
             </div>
