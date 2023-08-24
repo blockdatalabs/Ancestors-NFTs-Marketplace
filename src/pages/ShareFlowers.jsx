@@ -2,7 +2,8 @@ import React from "react";
 import Footer from "../components/footer/Footer";
 import Flowers from "../components/Evolutions/Flowers";
 
-function Home(props) {
+function ShareFlowers() {
+
   return (
     <div className="home-3 wrapper">
 
@@ -13,4 +14,4 @@ function Home(props) {
   );
 }
 
-export default Home;
+export default ShareFlowers;

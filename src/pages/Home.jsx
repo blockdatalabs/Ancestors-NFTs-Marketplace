@@ -6,7 +6,7 @@ import dataRoadMap from "../assets/data/data-roadmap";
 import Footer from "../components/footer/Footer";
 import Evolutions from "../components/Evolutions/Evolutions";
 
-function Home(props) {
+function Home() {
   return (
     <div className="home-3 wrapper">
       <Banner />

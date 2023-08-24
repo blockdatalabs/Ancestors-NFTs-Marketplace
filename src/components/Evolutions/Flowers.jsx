@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InitImage from "../../assets/images/tree/init-flower.jpg";
 import Gen1 from "../../assets/images/tree/Flowers-1.jpg";
 import Gen2 from "../../assets/images/tree/Flowers-2.jpg";
@@ -13,10 +13,30 @@ const getImages = async () => {
 
   return resp.json();
 };
-
+const checkout = () => {
+  if (window.unlockProtocol) {
+    window.unlockProtocol.loadCheckoutModal();
+  }
+};
 function Flowers() {
   const [query, setQuery] = useState("");
   const [generation, setGeneration] = useState([]);
+  const [locked, setLocked] = useState("pending");
+
+
+
+  const unlockHandler = (e) => {
+    setLocked(e.detail);
+  };
+
+  useEffect(() => {
+    window.addEventListener("unlockProtocol", unlockHandler);
+
+    return () => {
+      window.removeEventListener("unlockProtocol", unlockHandler);
+    };
+  }, []);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -100,13 +120,16 @@ function Flowers() {
           {generation ? (
             <>
               <div className="row">
-                <div className="col-md-3"></div>
-                <div className="col-md-6">
-                  <h4>Scroll to Discover previous Flowers:</h4>
+                <div className="col-md-7">
+                  <h4>Scroll to Discover previous Flowers Creations:</h4>
                   <br />
                   <br />
                 </div>
-                <div className="col-md-3"></div>
+                <div className="col-md-5">
+                  <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
+                    Unlock 🔒 and Get Access to more Flowers 💐
+                  </button>
+                </div>
               </div>
               <div className="row">
                 {generation.map(
@@ -134,9 +157,12 @@ function Flowers() {
                       </div>
                     ),
                 )}
+                <div  className="col-md-8 " style={{ cursor: "pointer" }}>
+
+                </div>
                 {generation.map(
                   (leoImage, index) =>
-                    index === 2 && (
+                  locked === "locked" && index === 2 && (
                       <div className="row" key={index}>
                         {leoImage.generated_images.map((leoGenerate, idx) => (
                           <>
@@ -161,7 +187,57 @@ function Flowers() {
                 )}
                 {generation.map(
                   (leoImage, index) =>
-                    index === 3 && (
+                  locked === "locked" && index === 3 && (
+                      <div className="row" key={index}>
+                        {leoImage.generated_images.map((leoGenerate, idx) => (
+                          <>
+                            <div className="col-md-4" key={idx}>
+                              <h2>Gen {idx + 1}</h2>
+                              <img
+                                src={leoGenerate?.url}
+                                style={{
+                                  width: "75%",
+                                  borderRadius: 40,
+                                }}
+                                alt="generations"
+                              />
+                              <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
+                            </div>
+                          </>
+                        ))}
+                      </div>
+                    ),
+                )}
+              {generation.map(
+                  (leoImage, index) =>
+                  locked === "locked" && index === 4 && (
+                      <div className="row" key={index}>
+                        {leoImage.generated_images.map((leoGenerate, idx) => (
+                          <>
+                            <div className="col-md-4" key={idx}>
+                              <h2>Gen {idx + 1}</h2>
+                              <img
+                                src={leoGenerate?.url}
+                                style={{
+                                  width: "75%",
+                                  borderRadius: 40,
+                                }}
+                                alt="generations"
+                              />
+                              <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
+                            </div>
+                          </>
+                        ))}
+                      </div>
+                    ),
+                )}
+                {generation.map(
+                  (leoImage, index) =>
+                  locked === "locked" && index === 5 && (
                       <div className="row" key={index}>
                         {leoImage.generated_images.map((leoGenerate, idx) => (
                           <>
@@ -202,7 +278,7 @@ function Flowers() {
             </div>
             <div className="col-md-4"></div>
           </div>
-
+            
           <div className="row">
             <div className="col-md-4">
               <h2>Gen1</h2>
@@ -234,6 +310,7 @@ function Flowers() {
           </div>
         </div>
       </div>
+
     </section>
   );
 }
