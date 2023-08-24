@@ -223,7 +223,7 @@ function Evolutions() {
               <div className="row">
                 <div className="col-md-3"></div>
                 <div className="col-md-6">
-                  <h4>Discover previous Evolutions:</h4>
+                  <h4>Scroll to Discover previous Evolutions:</h4>
                   <br />
                   <br />
                 </div>
