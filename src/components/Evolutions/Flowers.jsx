@@ -88,7 +88,7 @@ function Flowers() {
               <br />
 
               <h4 style={{ fontSize: 30 }}>
-                Flowers framed, cinema 4d
+                hyper detailed , stunning colors, framed, cinema 4d
               </h4>
               <br />
 
