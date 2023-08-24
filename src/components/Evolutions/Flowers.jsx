@@ -5,7 +5,7 @@ import Gen2 from "../../assets/images/tree/Flowers-1.jpg";
 import Gen3 from "../../assets/images/tree/Flowers-1.jpg";
 
 const getImages = async () => {
-  const urlImages = "https://ancestors.pulsarforge.io/api/flowers";
+  const urlImages = "https://ancestors.pulsarforge.io/api/images";
   const resp = await fetch(urlImages, {
     method: "GET",
     headers: { "Content-type": "application/json" },
