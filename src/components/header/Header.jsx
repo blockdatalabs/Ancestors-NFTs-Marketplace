@@ -40,7 +40,7 @@ const Header = () => {
                   <img
                     id="site-logo"
                     src={logo}
-                    style={{ width: "100px" }}
+                    style={{ width: "150px" }}
                     alt="Ancestors"
                   />
                 </Link>
@@ -83,7 +83,14 @@ const Header = () => {
                   <span></span>
                 </div>
               </div>
-
+              <div className="header__action">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf9Cv1ja-cmk_Th4LTOb0-WvluPjAdbAJ3uPMIcVDC2xS51DQ/viewform?embedded=true"
+                  className="action-btn"
+                >
+                  <span>Send Feedback</span>
+                </a>
+              </div>
               <div className="header__action">
                 <a
                   href="https://pulsarforge.substack.com/"
