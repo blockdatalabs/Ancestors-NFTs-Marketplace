@@ -241,7 +241,7 @@ function Evolutions() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "100%",
+                                  width: "75%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -266,7 +266,7 @@ function Evolutions() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "100%",
+                                  width: "75%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -291,7 +291,7 @@ function Evolutions() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "100%",
+                                  width: "75%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
