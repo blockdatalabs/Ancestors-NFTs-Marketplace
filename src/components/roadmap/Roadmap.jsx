@@ -8,8 +8,6 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 
-import TreeOfLife from "../../assets/images/tree/tree-of-life.jpg";
-
 Roadmap.propTypes = {
   data: PropTypes.array,
 };
