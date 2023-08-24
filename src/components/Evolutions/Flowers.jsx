@@ -120,8 +120,8 @@ function Flowers() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "512px",
-                                  height: "512px",
+                                  width: "760px",
+                                  height: "1024px",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -146,8 +146,8 @@ function Flowers() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "512px",
-                                  height: "512px",
+                                  width: "760px",
+                                  height: "1024px",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -172,8 +172,8 @@ function Flowers() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "512px",
-                                  height: "512px",
+                                  width: "760px",
+                                  height: "1024px",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -212,7 +212,7 @@ function Flowers() {
               <br />
               <img
                 src={Gen1}
-                alt="skins of one evolution"
+                alt="skins of one flower"
                 style={{ width: "100%", borderRadius: 40 }}
               />
             </div>
@@ -221,7 +221,7 @@ function Flowers() {
               <br />
               <img
                 src={Gen2}
-                alt="skins of one evolution"
+                alt="skins of one flower"
                 style={{ width: "100%", borderRadius: 40 }}
               />
             </div>
@@ -230,7 +230,7 @@ function Flowers() {
               <br />
               <img
                 src={Gen3}
-                alt="skins of one evolution"
+                alt="skins of one flower"
                 style={{ width: "100%", borderRadius: 40 }}
               />
             </div>
