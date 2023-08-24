@@ -6,8 +6,18 @@ const menus = [
   },
   {
     id: 2,
-    name: 'Send Tree Flowers',
-    links: "/tree-flowers",
+    name: 'Share Tree Flowers',
+    links: "/share-tree-flowers",
+  },
+  {
+    id: 3,
+    name: 'Send Feedback',
+    links: "https://docs.google.com/forms/d/e/1FAIpQLSf9Cv1ja-cmk_Th4LTOb0-WvluPjAdbAJ3uPMIcVDC2xS51DQ/viewform?embedded=true",
+  },
+  {
+    id: 4,
+    name: 'Newsletter',
+    links: "https://pulsarforge.substack.com/",
   },
 ];
 

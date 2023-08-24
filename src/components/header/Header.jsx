@@ -60,7 +60,7 @@ const Header = () => {
                           data.namesub ? "menu-item-has-children" : ""
                         } ${activeIndex === idx ? "active" : ""}`}
                       >
-                        <Link to={data.links}>{data.name}</Link>
+                        <a href={data.links}>{data.name}</a>
                         {data.namesub && (
                           <ul className="sub-menu">
                             {data.namesub.map((submenu) => (
@@ -82,22 +82,6 @@ const Header = () => {
                 >
                   <span></span>
                 </div>
-              </div>
-              <div className="header__action">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSf9Cv1ja-cmk_Th4LTOb0-WvluPjAdbAJ3uPMIcVDC2xS51DQ/viewform?embedded=true"
-                  className="action-btn"
-                >
-                  <span>Send Feedback</span>
-                </a>
-              </div>
-              <div className="header__action">
-                <a
-                  href="https://pulsarforge.substack.com/"
-                  className="action-btn"
-                >
-                  <span>Newsletter</span>
-                </a>
               </div>
             </div>
           </div>
