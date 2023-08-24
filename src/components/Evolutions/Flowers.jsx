@@ -120,7 +120,7 @@ function Flowers() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "100%",
+                                  width: "50%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -145,7 +145,7 @@ function Flowers() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "100%",
+                                  width: "50%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -170,7 +170,7 @@ function Flowers() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "100%",
+                                  width: "50%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
