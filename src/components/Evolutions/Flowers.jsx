@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import InitImage from "../../assets/images/tree/init-flower.jpg";
 import Gen1 from "../../assets/images/tree/Flowers-1.jpg";
-import Gen2 from "../../assets/images/tree/Flowers-1.jpg";
-import Gen3 from "../../assets/images/tree/Flowers-1.jpg";
+import Gen2 from "../../assets/images/tree/Flowers-2.jpg";
+import Gen3 from "../../assets/images/tree/Flowers-3.jpg";
 
 const getImages = async () => {
   const urlImages = "https://ancestors.pulsarforge.io/api/images";
