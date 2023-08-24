@@ -140,7 +140,7 @@ function Evolutions() {
                     value={query}
                     placeholder="Your Prompt"
                     onChange={(event) => setQuery(event.target.value)}
-                    style={{ width: 400 }}
+                    style={{ width: 700, height: 100 }}
                   />
 
                   <br />
@@ -191,9 +191,9 @@ function Evolutions() {
                 id="query"
                 name="query"
                 value={query}
-                placeholder="Your Prompt"
+                placeholder="Write Your Prompt to Create Evolutions"
                 onChange={(event) => setQuery(event.target.value)}
-                style={{ width: 400 }}
+                style={{  width: 700, height: 100  }}
               />
 
               <br />

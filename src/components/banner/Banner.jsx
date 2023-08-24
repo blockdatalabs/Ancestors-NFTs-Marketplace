@@ -1,5 +1,5 @@
 import React from "react";
-import TreeOfLife from "../../assets/images/tree/tree-of-life.jpg";
+import TreeOfLife from "../../assets/images/tree/UI-FLOW.gif";
 
 function Banner(props) {
   return (
@@ -39,7 +39,7 @@ function Banner(props) {
                 <img
                   src={TreeOfLife}
                   alt="tree of life"
-                  style={{ width: "868px", height: "auto", borderRadius: 40 }}
+                  style={{ border: "12px double", width: "900px", height: "auto", borderRadius: 40 }}
                 />
               </div>
             </div>

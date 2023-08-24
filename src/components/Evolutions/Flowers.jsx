@@ -74,7 +74,7 @@ function Flowers() {
                 value={query}
                 placeholder="Flowers + Your Prompt"
                 onChange={(event) => setQuery(event.target.value)}
-                style={{ width: 400 }}
+                style={{  width: 700, height: 100  }}
               />
 
               <br />
