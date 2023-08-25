@@ -19,6 +19,11 @@ const menus = [
     name: 'Newsletter',
     links: "https://pulsarforge.substack.com/",
   },
+  {
+    id: 5,
+    name: 'Community',
+    links: "https://discord.com/invite/4mXg6QSyY8",
+  }
 ];
 
 export default menus;

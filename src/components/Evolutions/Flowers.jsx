@@ -71,7 +71,7 @@ function Flowers() {
             <br />
             <br />
             <h4>Flowers Model</h4>
-            <h2>Init Image: </h2>
+            <h2>Sample Image: </h2>
             <br />
             <br />
             <img
@@ -100,7 +100,7 @@ function Flowers() {
               <br />
               <br />
 
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
                 Growth Flowers
               </button>
 
@@ -121,7 +121,8 @@ function Flowers() {
             <>
               <div className="row">
                 <div className="col-md-7">
-                  <h4>Scroll to Discover previous Flowers Creations:</h4>
+                  <h4>After Action Growth Flowers.</h4>
+                  <h4>Scroll to Discover previous Creations:</h4>
                   <br />
                   <br />
                 </div>
@@ -272,7 +273,7 @@ function Flowers() {
               <br />
               <br />
               <br />
-              <h4>Examples:</h4>
+              <h4>Row Generation Example:</h4>
               <br />
               <br />
             </div>

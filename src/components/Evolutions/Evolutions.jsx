@@ -92,8 +92,8 @@ function Evolutions() {
                 type="submit"
                 style={{
                   color: "blue",
-                  width: 500,
-                  height: 60,
+                  width: 780,
+                  height: 80,
                   borderRadius: 40,
                 }}
                 shape="square"
@@ -101,7 +101,7 @@ function Evolutions() {
                 label="Open Wallet"
               >
                 {" "}
-                Connect wallet & Unlock SD XL Creative Mode{" "}
+                Connect wallet & Unlock Stable Diffussion XL Creative Mode{" "}
               </button>
 
               <img
@@ -317,7 +317,7 @@ function Evolutions() {
               <br />
               <br />
               <br />
-              <h4>Examples:</h4>
+              <h4>Row Generation Example:</h4>
               <br />
               <br />
             </div>
