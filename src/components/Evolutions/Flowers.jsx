@@ -87,7 +87,7 @@ function Flowers() {
           <div className="col-md-8">
             <h2>
               {" "}
-              <br /> Collect Flowers {" "}<br /> Custom Trained Model {" "}
+              <br /> Collect Flowers {" "}<br /> Custom Trained Model
             </h2>
             <form onSubmit={handleSubmit} className="form-group">
               <input
