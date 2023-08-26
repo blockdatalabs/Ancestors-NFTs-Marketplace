@@ -144,19 +144,6 @@ function Flowers() {
           {generation ? (
             <>
               <div className="row">
-                <div className="col-md-7">
-                  <h4>After Action Growth Flowers.</h4>
-                  <h4>Scroll to Discover previous Creations:</h4>
-                  <br />
-                  <br />
-                </div>
-                <div className="col-md-5">
-                  <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
-                    Unlock 🔒 and Get Access to more Flowers 💐
-                  </button>
-                </div>
-              </div>
-              <div className="row">
                 {generation.map(
                   (leoImage, index) =>
                     index === 1 && (
