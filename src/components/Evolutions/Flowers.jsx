@@ -3,6 +3,7 @@ import { exportComponentAsJPEG} from 'react-component-export-image';
 import Gen1 from "../../assets/images/tree/init-flower-1.jpg";
 import Gen2 from "../../assets/images/tree/init-flower-2.jpg";
 import Gen3 from "../../assets/images/tree/init-flower-3.jpg";
+import Logo from "../../assets/images/logo/logo-header.png";
 
 const getImages = async () => {
   const urlImages = "https://ancestors.pulsarforge.io/api/images";
@@ -97,7 +98,7 @@ function Flowers() {
                 {image ? (
                   <img src={image} style={{width: "100%", borderRadius: 8,marginBottom: 40}} alt="Kudos" />
                 ) : (
-                  <h4 style={{border: "1px solid coral", borderRadius: 8, marginBottom: 40, paddingTop: 100, paddingBottom: 100, paddingLeft: 10}}><span>Drop an image here, desktop experience</span></h4>
+                  <h4 style={{border: "1px solid coral", borderRadius: 8, marginBottom: 40, paddingTop: 200, paddingBottom: 200, paddingLeft: 10}}><span>Drop an image here, desktop experience</span></h4>
                 )}
               </div>
               <textarea 
@@ -118,7 +119,7 @@ function Flowers() {
                 placeholder="Written by: name"
                 style={{  width: "100%", height: 20, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 40  }}
               />
-              <h5 className="btn btn-primary">Created at ancestors.pulsarforge.io</h5>
+              <h5 className="btn btn-primary">Created at Ancestors pulsarforge io <img src={Logo} style={{width: 85}} alt="Ancestors logo" /></h5>
             </div>
           <div className="col-md-7">
             <h2>
