@@ -144,7 +144,7 @@ function Flowers() {
                 Growth Flowers
               </button>
               <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
-                    Unlock 🔒 and Get Access to more Flowers 💐
+                    Subscribe ✅ and Get Access to more Flowers 💐
               </button>
               <br />
               <br />
