@@ -1518,7 +1518,7 @@ header.absolute {
   top: -108px;
   left: 0;
   width: 100%;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 5px 0px rgb(0, 0, 0);
   z-index: 9999;
   background: var(--background-body);
   border: none;
