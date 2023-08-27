@@ -153,11 +153,8 @@ function Flowers() {
               <br />
               <br />
 
-              <button type="submit" className="btn btn-primary" style={{padding: 25, marginRight: 20, borderRadius: 20}}>
+              <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
                 Growth Flowers
-              </button>
-              <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
-                    Subscribe ✅ and Get Access to more Flowers 💐
               </button>
               <br />
               <br />
@@ -169,6 +166,9 @@ function Flowers() {
 
               <h4>Sent next Flowers and discover previous creations</h4>
             </form>
+            <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
+                    Subscribe ✅ and Get Access to more Flowers 💐
+              </button>
             <br />
             <br />
               {generation ? (
