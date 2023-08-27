@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { exportComponentAsJPEG} from 'react-component-export-image';
 import Gen1 from "../../assets/images/tree/init-flower-1.jpg";
 import Gen2 from "../../assets/images/tree/init-flower-2.jpg";
@@ -19,15 +19,11 @@ const checkout = () => {
   }
 };
 
-const fileTypes = ["JPG"];
-
 function Flowers() {
   const componentRef = useRef();
-  const [file, setFile] = useState(null);
   const [query, setQuery] = useState("");
   const [generation, setGeneration] = useState([]);
   const [locked, setLocked] = useState("pending");
-  const [images, setImages] = useState([]);
   const [image, setImage] = useState(null);
 
   const handleDrop = (e) => {
@@ -42,21 +38,6 @@ function Flowers() {
 
   const handleDragOver = (e) => {
     e.preventDefault();
-  };
-
-  const onDrop = useCallback(() => {
-      const reader = new FileReader();
-
-      reader.onload = function (e) {
-        setImages(file);
-      };
-
-      reader.readAsDataURL(file);
-      return file;
-  }, []);
-
-  const handleChange = (file) => {
-    setFile(file);
   };
 
   const unlockHandler = (e) => {
