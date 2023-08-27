@@ -40,10 +40,6 @@ function Flowers() {
     e.preventDefault();
   };
 
-  const handleDragStart = (e, imageUrl) => {
-    e.dataTransfer.setData('text', imageUrl);
-  };
-
   const unlockHandler = (e) => {
     setLocked(e.detail);
   };
@@ -184,6 +180,11 @@ function Flowers() {
                             </div>
                           </>
                         ))}
+                        <div className="col-md-12"> 
+                          <h5>
+                            Previous Creator Prompt: {leoImage.prompt}
+                          </h5>
+                        </div>
                       </div>
                     ),
                 )}
