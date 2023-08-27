@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { exportComponentAsJPEG} from 'react-component-export-image';
-import InitImage from "../../assets/images/tree/init-flower-1.jpg";
-import Gen1 from "../../assets/images/tree/Flowers-1.jpg";
-import Gen2 from "../../assets/images/tree/Flowers-2.jpg";
-import Gen3 from "../../assets/images/tree/Flowers-3.jpg";
+import Gen1 from "../../assets/images/tree/init-flower-1.jpg";
+import Gen2 from "../../assets/images/tree/init-flower-2.jpg";
+import Gen3 from "../../assets/images/tree/init-flower-3.jpg";
 
 const getImages = async () => {
   const urlImages = "https://ancestors.pulsarforge.io/api/images";
@@ -19,13 +18,46 @@ const checkout = () => {
     window.unlockProtocol.loadCheckoutModal();
   }
 };
+
+const fileTypes = ["JPG"];
+
 function Flowers() {
   const componentRef = useRef();
+  const [file, setFile] = useState(null);
   const [query, setQuery] = useState("");
   const [generation, setGeneration] = useState([]);
   const [locked, setLocked] = useState("pending");
+  const [images, setImages] = useState([]);
+  const [image, setImage] = useState(null);
 
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const droppedImage = e.dataTransfer.files[0];
 
+    if (droppedImage && droppedImage.type.startsWith('image/')) {
+      const imageUrl = URL.createObjectURL(droppedImage);
+      setImage(imageUrl);
+    }
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+
+  const onDrop = useCallback(() => {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        setImages(file);
+      };
+
+      reader.readAsDataURL(file);
+      return file;
+  }, []);
+
+  const handleChange = (file) => {
+    setFile(file);
+  };
 
   const unlockHandler = (e) => {
     setLocked(e.detail);
@@ -67,24 +99,47 @@ function Flowers() {
             {" "}
             <br /> <br /> Tree of Life calling World Builders <br /> <br />{" "}
           </h2>
-    
-          <div className="col-md-4" style={{ padding: 30, borderRadius: 40, border: "30px double coral", marginTop: 40, background: "#ebe054"}} ref={componentRef} >
+          <div className="col-md-12">
+            <button className="btn btn-secondary" onClick={() => exportComponentAsJPEG(componentRef)} style={{width: 250, height: 70}}>
+              Export as jpeg
+            </button>
+          </div>
+          <div className="col-md-5" style={{ padding: 30, borderRadius: 40, border: "30px double coral", marginTop: 40, background: "#ebe054"}} ref={componentRef} >
               <h3>Apreciation Card, Kudos</h3>
               <br />
-              <img
-                src={InitImage}
-                alt="skins of one flower"
-                style={{ width: "100%",borderRadius: 8}}
-              />
+              <div
+                className="drop-area"
+                
+                onDrop={handleDrop}
+                onDragOver={handleDragOver}
+              >
+                {image ? (
+                  <img src={image} style={{width: "100%", borderRadius: 8,marginBottom: 40}} alt="Kudos" />
+                ) : (
+                  <h4 style={{border: "1px solid coral", borderRadius: 8, marginBottom: 40}}><span>Drop an image here, desktop experience</span></h4>
+                )}
+              </div>
               <textarea 
                 type="multiliner"
                 className="form-control"
                 placeholder="Write your apreciation words or Kudos"
-                style={{  width: "100%", height: 100, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 40  }}
+                style={{  width: "100%", height: 100, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
+              />
+              <textarea 
+                type="multiliner"
+                className="form-control"
+                placeholder="Traits: element = name"
+                style={{  width: "100%", height: 20, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
+              />
+              <textarea 
+                type="multiliner"
+                className="form-control"
+                placeholder="Written by: name"
+                style={{  width: "100%", height: 20, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 40  }}
               />
               <h5 className="btn btn-primary">Created at ancestors.pulsarforge.io</h5>
             </div>
-          <div className="col-md-8">
+          <div className="col-md-7">
             <h2>
               {" "}
               <br /> Collect Flowers {" "}<br /> Custom Trained Model
@@ -104,10 +159,12 @@ function Flowers() {
               <br />
               <br />
 
-              <button type="submit" className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
+              <button type="submit" className="btn btn-primary" style={{padding: 25, marginRight: 20, borderRadius: 20}}>
                 Growth Flowers
               </button>
-
+              <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
+                    Unlock 🔒 and Get Access to more Flowers 💐
+              </button>
               <br />
               <br />
 
@@ -116,33 +173,12 @@ function Flowers() {
               </h4>
               <br />
 
-              <h2>Sent next Flowers</h2>
+              <h4>Sent next Flowers and discover previous creations</h4>
             </form>
             <br />
             <br />
-            <div className="row">
-                <div className="col-md-7">
-                  <h4>After Growth Flowers</h4>
-                  <h4>Scroll to Discover previous Creations:</h4>
-                  <br />
-                  <br />
-                </div>
-                <div className="col-md-5">
-                  <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
-                    Unlock 🔒 and Get Access to more Flowers 💐
-                  </button>
-                </div>
-              </div>
-          </div>
-          <div className="col-md-4">
-            <button className="btn btn-secondary" onClick={() => exportComponentAsJPEG(componentRef)}>
-              Export as jpeg
-            </button>
-          </div>
-        </div>
-        <div className="row" style={{ marginTop: 80, marginBottom: 80 }}>
-          {generation ? (
-            <>
+              {generation ? (
+              <>
               <div className="row">
                 {generation.map(
                   (leoImage, index) =>
@@ -174,7 +210,7 @@ function Flowers() {
                 </div>
                 {generation.map(
                   (leoImage, index) =>
-                  locked === "locked" && index === 2 && (
+                  index === 2 && (
                       <div className="row" key={index}>
                         {leoImage.generated_images.map((leoGenerate, idx) => (
                           <>
@@ -197,6 +233,62 @@ function Flowers() {
                       </div>
                     ),
                 )}
+                </div>
+                </>
+            
+          ) : (
+            <h4>Submit, wait and get the species evolutions</h4>
+          )}
+                    <div className="row">
+            <div className="col-md-4"></div>
+            <div className="col-md-4">
+              <br />
+              <br />
+              <br />
+              <br />
+              <h4>Row Sample:</h4>
+              <br />
+              <br />
+            </div>
+            <div className="col-md-4"></div>
+          </div>
+            
+          <div className="row">
+            <div className="col-md-4" >
+              <h2>Gen1</h2>
+              <br />
+              <img
+                src={Gen1}
+                alt="skins of one flower"
+                style={{ width: "100%", borderRadius: 40}}
+              />
+            </div>
+           
+            <div className="col-md-4">
+              <h2>Gen2</h2>
+              <br />
+              <img
+                src={Gen2}
+                alt="skins of one flower"
+                style={{ width: "100%", borderRadius: 40 }}
+              />
+            </div>
+            <div className="col-md-4">
+              <h2>Gen3</h2>
+              <br />
+              <img
+                src={Gen3}
+                alt="skins of one flower"
+                style={{ width: "100%", borderRadius: 40 }}
+              />
+            </div>
+          </div>
+          </div>
+
+        </div>
+        <div className="row" style={{ marginTop: 80, marginBottom: 80 }}>
+          {generation ? (
+            <>
                 {generation.map(
                   (leoImage, index) =>
                   locked === "locked" && index === 3 && (
@@ -272,55 +364,36 @@ function Flowers() {
                       </div>
                     ),
                 )}
-              </div>
+                {generation.map(
+                  (leoImage, index) =>
+                  locked === "locked" && index === 6 && (
+                      <div className="row" key={index}>
+                        {leoImage.generated_images.map((leoGenerate, idx) => (
+                          <>
+                            <div className="col-md-4" key={idx}>
+                              <h2>Gen {idx + 1}</h2>
+                              <img
+                                src={leoGenerate?.url}
+                                style={{
+                                  width: "75%",
+                                  borderRadius: 40,
+                                }}
+                                alt="generations"
+                              />
+                              <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
+                            </div>
+                          </>
+                        ))}
+                      </div>
+                    ),
+                )}
             </>
           ) : (
             <h4>Submit, wait and get the species evolutions</h4>
           )}
-          <div className="row">
-            <div className="col-md-4"></div>
-            <div className="col-md-4">
-              <br />
-              <br />
-              <br />
-              <br />
-              <h4>Row Generation Example:</h4>
-              <br />
-              <br />
-            </div>
-            <div className="col-md-4"></div>
-          </div>
-            
-          <div className="row">
-            <div className="col-md-4" >
-              <h2>Gen1</h2>
-              <br />
-              <img
-                src={Gen1}
-                alt="skins of one flower"
-                style={{ width: "100%", borderRadius: 40}}
-              />
-            </div>
-           
-            <div className="col-md-4">
-              <h2>Gen2</h2>
-              <br />
-              <img
-                src={Gen2}
-                alt="skins of one flower"
-                style={{ width: "100%", borderRadius: 40 }}
-              />
-            </div>
-            <div className="col-md-4">
-              <h2>Gen3</h2>
-              <br />
-              <img
-                src={Gen3}
-                alt="skins of one flower"
-                style={{ width: "100%", borderRadius: 40 }}
-              />
-            </div>
-          </div>
+
         </div>
       </div>
 
