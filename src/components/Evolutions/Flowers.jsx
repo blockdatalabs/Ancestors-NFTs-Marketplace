@@ -98,28 +98,40 @@ function Flowers() {
                 {image ? (
                   <img src={image} style={{width: "100%", borderRadius: 8,marginBottom: 40}} alt="Kudos" />
                 ) : (
-                  <h4 style={{border: "1px solid coral", borderRadius: 8, marginBottom: 40, paddingTop: 200, paddingBottom: 200, paddingLeft: 10}}><span>Drop an image here, desktop experience</span></h4>
+                  <h4 style={{border: "1px solid coral", borderRadius: 8, marginBottom: 40, paddingTop: 250, paddingBottom: 250, paddingLeft: 10}}><span>Drop an image here, desktop experience</span></h4>
                 )}
               </div>
               <textarea 
                 type="multiliner"
                 className="form-control"
-                placeholder="Write your apreciation words or Kudos"
-                style={{  width: "100%", height: 100, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
+                placeholder="1º Line. Write your apreciation words or Kudos"
+                style={{  width: "100%", height: 120, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
+              />
+              <textarea 
+                type="multiliner"
+                className="form-control"
+                placeholder="2º Line"
+                style={{  width: "100%", height: 90, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
+              />
+              <textarea 
+                type="multiliner"
+                className="form-control"
+                placeholder="3º Line"
+                style={{  width: "100%", height: 60, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
               />
               <textarea 
                 type="multiliner"
                 className="form-control"
                 placeholder="Traits: element = name"
-                style={{  width: "100%", height: 20, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
+                style={{  width: "100%", height: 30, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
               />
               <textarea 
                 type="multiliner"
                 className="form-control"
                 placeholder="Written by: name"
-                style={{  width: "100%", height: 20, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 40  }}
+                style={{  width: "100%", height: 30, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 40  }}
               />
-              <h5 className="btn btn-primary">Created at Ancestors pulsarforge io <img src={Logo} style={{width: 85}} alt="Ancestors logo" /></h5>
+              <h5 className="btn btn-primary">Created at Ancestors pulsarforge io <img src={Logo} style={{width: 125}} alt="Ancestors logo" /></h5>
             </div>
           <div className="col-md-7">
             <h2>
