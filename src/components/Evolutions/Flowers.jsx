@@ -90,14 +90,14 @@ function Flowers() {
               <br />
               <div
                 className="drop-area"
-                
+              
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
               >
                 {image ? (
                   <img src={image} style={{width: "100%", borderRadius: 8,marginBottom: 40}} alt="Kudos" />
                 ) : (
-                  <h4 style={{border: "1px solid coral", borderRadius: 8, marginBottom: 40}}><span>Drop an image here, desktop experience</span></h4>
+                  <h4 style={{border: "1px solid coral", borderRadius: 8, marginBottom: 40, paddingTop: 100, paddingBottom: 100, paddingLeft: 10}}><span>Drop an image here, desktop experience</span></h4>
                 )}
               </div>
               <textarea 
@@ -227,7 +227,7 @@ function Flowers() {
               <br />
               <br />
               <br />
-              <h4>Row Sample:</h4>
+              <h4>Sample:</h4>
               <br />
               <br />
             </div>
