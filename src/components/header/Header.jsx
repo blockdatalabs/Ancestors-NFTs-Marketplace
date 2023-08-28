@@ -40,7 +40,7 @@ const Header = () => {
                   <img
                     id="site-logo"
                     src={logo}
-                    style={{ width: "150px" }}
+                    style={{ width: "110px" }}
                     alt="Ancestors"
                   />
                 </Link>

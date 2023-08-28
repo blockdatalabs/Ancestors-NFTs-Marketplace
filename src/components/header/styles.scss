@@ -9,7 +9,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  height: 150px;
+  height: 120px;
   @include flex(center, center);
 
   &.is-fixed {

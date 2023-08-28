@@ -146,7 +146,7 @@ function Evolutions() {
                   <br />
                   <br />
 
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
                     Evolve them
                   </button>
 
@@ -199,7 +199,7 @@ function Evolutions() {
               <br />
               <br />
 
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
                 Evolve them
               </button>
 
@@ -221,13 +221,13 @@ function Evolutions() {
           {generation ? (
             <>
               <div className="row">
-                <div className="col-md-3"></div>
-                <div className="col-md-6">
-                  <h4>After hit, evolve them, scroll to discover previous creations:</h4>
+                <div className="col-md-2"></div>
+                <div className="col-md-8">
+                  <h4>After hit the button, scroll to discover previous mecha creations:</h4>
                   <br />
                   <br />
                 </div>
-                <div className="col-md-3"></div>
+                <div className="col-md-2"></div>
               </div>
               <div className="row">
                 {generation.map(

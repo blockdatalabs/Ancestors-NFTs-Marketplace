@@ -11,16 +11,21 @@ const menus = [
   },
   {
     id: 3,
+    name: 'Flowers Market',
+    links: "/flowers-market",
+  },
+  {
+    id: 4,
     name: 'Send Feedback',
     links: "https://docs.google.com/forms/d/e/1FAIpQLSf9Cv1ja-cmk_Th4LTOb0-WvluPjAdbAJ3uPMIcVDC2xS51DQ/viewform?embedded=true",
   },
   {
-    id: 4,
+    id: 5,
     name: 'Newsletter',
     links: "https://pulsarforge.substack.com/",
   },
   {
-    id: 5,
+    id: 6,
     name: 'Community',
     links: "https://discord.com/invite/4mXg6QSyY8",
   }
