@@ -87,7 +87,7 @@ function Flowers() {
             </button>
           </div>
           <div className="col-md-5" style={{ padding: 30, borderRadius: 40, border: "30px double coral", marginTop: 40, background: "#ebe054"}} ref={componentRef} >
-              <h3>Apreciation Card, Kudos</h3>
+              <h3>Appreciation Card, Kudos</h3>
               <br />
               <div
                 className="drop-area"
