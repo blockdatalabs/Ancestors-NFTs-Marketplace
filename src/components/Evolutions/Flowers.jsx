@@ -5,8 +5,11 @@ import Gen2 from "../../assets/images/tree/init-flower-2.jpg";
 import Gen3 from "../../assets/images/tree/init-flower-3.jpg";
 import Logo from "../../assets/images/logo/logo-header.png";
 
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 const getImages = async () => {
   const urlImages = "https://ancestors.pulsarforge.io/api/images";
+  await delay(15000);
   const resp = await fetch(urlImages, {
     method: "GET",
     headers: { "Content-type": "application/json" },
@@ -164,7 +167,7 @@ function Flowers() {
               </h4>
               <br />
 
-              <h4>Sent next Flowers and discover previous creations</h4>
+              <h4>Sent next Flowers and discover previous creations, wait around 9 seconds to get your results</h4>
             </form>
             <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
                     Subscribe ✅ and Get Access to more Flowers 💐
@@ -176,7 +179,7 @@ function Flowers() {
               <div className="row">
                 {generation.map(
                   (leoImage, index) =>
-                    index === 1 && (
+                    index === 0 && (
                       <div className="row" key={index}>
                         {leoImage.generated_images.map((leoGenerate, idx) => (
                           <>
@@ -261,6 +264,31 @@ function Flowers() {
         <div className="row" style={{ marginTop: 80, marginBottom: 80 }}>
           {generation ? (
             <>
+            {generation.map(
+                  (leoImage, index) =>
+                  locked === "locked" && index === 1 && (
+                      <div className="row" key={index}>
+                        {leoImage.generated_images.map((leoGenerate, idx) => (
+                          <>
+                            <div className="col-md-4" key={idx}>
+                              <h2>Gen {idx + 1}</h2>
+                              <img
+                                src={leoGenerate?.url}
+                                style={{
+                                  width: "75%",
+                                  borderRadius: 40,
+                                }}
+                                alt="generations"
+                              />
+                              <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
+                            </div>
+                          </>
+                        ))}
+                      </div>
+                    ),
+                )}
             {generation.map(
                   (leoImage, index) =>
                   locked === "locked" && index === 2 && (
