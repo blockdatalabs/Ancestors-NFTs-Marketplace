@@ -7,8 +7,11 @@ import Gen3 from "../../assets/images/tree/gen3_1.jpg";
 import CreativeMode from "../../assets/images/tree/unlock-creative-mode.png";
 import { sequence } from "0xsequence";
 
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 const getImages = async () => {
   const urlImages = "https://ancestors.pulsarforge.io/api/images";
+  await delay(15000);
   const resp = await fetch(urlImages, {
     method: "GET",
     headers: { "Content-type": "application/json" },
@@ -214,6 +217,7 @@ function Evolutions() {
               <br />
 
               <h2>Sent next Evolutions</h2>
+              <p>Wait around 9 seconds to get your results</p>
             </form>
           </div>
         </div>
@@ -230,6 +234,31 @@ function Evolutions() {
                 <div className="col-md-2"></div>
               </div>
               <div className="row">
+              {generation.map(
+                  (leoImage, index) =>
+                    index === 0 && (
+                      <div className="row" key={index}>
+                        {leoImage.generated_images.map((leoGenerate, idx) => (
+                          <>
+                            <div className="col-md-4" key={idx}>
+                              <h2>Gen {idx + 1}</h2>
+                              <img
+                                src={leoGenerate?.url}
+                                style={{
+                                  width: "75%",
+                                  borderRadius: 40,
+                                }}
+                                alt="generations"
+                              />
+                              <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
+                            </div>
+                          </>
+                        ))}
+                      </div>
+                    ),
+                )}
                 {generation.map(
                   (leoImage, index) =>
                     index === 1 && (
