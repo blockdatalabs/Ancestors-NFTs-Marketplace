@@ -41,10 +41,19 @@ function Footer(props) {
               <div className="center mb--30">
                 <ul className="list">
                   <li>
-                    <Link to="/">Evolution"s Home</Link>
+                    <Link to="/">Evolutions</Link>
+                  </li>
+                  <li>
+                    <Link to="/share-tree-flowers">Share</Link>
+                  </li>
+                  <li>
+                    <Link to="/flowers-market">Marketplace</Link>
+                  </li>
+                  <li>
+                    <a href="https://pulsarforge.io">Developed at pulsarforge.io</a>
                   </li>
                 </ul>
-                <p>Ancestors All Rights Reserved</p>
+                <h5>Ancestors All Rights Reserved</h5>
               </div>
             </div>
           </div>
