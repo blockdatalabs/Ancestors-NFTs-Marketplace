@@ -103,11 +103,6 @@ function Flowers() {
             {" "}
             <br /> <br /> Tree of Life calling World Builders <br /> <br />{" "}
           </h2>
-          <div className="col-md-12">
-            <button className="btn btn-secondary" onClick={() => exportComponentAsJPEG(componentRef)} style={{width: 250, height: 70}}>
-              Export as jpeg
-            </button>
-          </div>
           <div className="col-md-5" style={{ padding: 30, borderRadius: 40, border: "30px double coral", marginTop: 40, background: "#ebe054"}} ref={componentRef} >
               <h3>Appreciation Card, Kudos</h3>
               <br />
@@ -179,8 +174,13 @@ function Flowers() {
               <h4>Sent next Flowers and discover previous creations, wait around 9 seconds to get your results</h4>
             </form>
             <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
-                    Subscribe ✅ and Get Access to more Flowers 💐
-              </button>
+                  Subscribe ✅ and Get Access to more Flowers 💐
+            </button>
+              <div className="col-md-12">
+            <button className="btn btn-secondary" onClick={() => exportComponentAsJPEG(componentRef)} style={{width: 340, height: 70, borderRadius: 20, marginTop: 30}}>
+              Export Card as JPEG
+            </button>
+          </div>
             <br />
             <br />
               {generation ? (
@@ -197,7 +197,7 @@ function Flowers() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "75%",
+                                  width: "90%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
