@@ -22,14 +22,33 @@ const checkout = () => {
     window.unlockProtocol.loadCheckoutModal();
   }
 };
-
+const TextAreaInput = ({onChange, value}) => {
+  return(
+    <textarea 
+    type="multiliner"
+    className="form-control"
+    placeholder="Expanse your written lines"
+    style={{  width: "100%", height: 90, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
+  />
+  )
+}
 function Flowers() {
   const componentRef = useRef();
   const [query, setQuery] = useState("");
   const [generation, setGeneration] = useState([]);
   const [locked, setLocked] = useState("pending");
   const [image, setImage] = useState(null);
+  const [textInputs, setTextInputs] = useState([]);
 
+  const handleAddTextInput = () => {
+    setTextInputs([...textInputs, '']);
+  };
+
+  const handleTextInputChange = (index, newText) => {
+    const updatedTextInputs = [...textInputs];
+    updatedTextInputs[index] = newText;
+    setTextInputs(updatedTextInputs);
+  };
   const handleDrop = (e) => {
     e.preventDefault();
 
@@ -107,27 +126,17 @@ function Flowers() {
               <textarea 
                 type="multiliner"
                 className="form-control"
-                placeholder="1º Line. Write your apreciation words or Kudos"
+                placeholder="Write your apreciation words or Kudos"
                 style={{  width: "100%", height: 120, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
               />
-              <textarea 
-                type="multiliner"
-                className="form-control"
-                placeholder="2º Line"
-                style={{  width: "100%", height: 90, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
-              />
-              <textarea 
-                type="multiliner"
-                className="form-control"
-                placeholder="3º Line"
-                style={{  width: "100%", height: 60, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
-              />
-              <textarea 
-                type="multiliner"
-                className="form-control"
-                placeholder="Traits: element = name"
-                style={{  width: "100%", height: 30, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20  }}
-              />
+              <button onClick={handleAddTextInput} style={{  width: "100%", height: 40, borderRadius: 8, background: "lightgoldenrodyellow", marginBottom: 20, border: "none"  }}>➕</button>
+              {textInputs.map((text, index) => (
+                <TextAreaInput
+                  key={index}
+                  value={text}
+                  onChange={(e) => handleTextInputChange(index, e.target.value)}
+                />
+              ))}
               <textarea 
                 type="multiliner"
                 className="form-control"
