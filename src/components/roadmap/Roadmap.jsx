@@ -26,9 +26,9 @@ function Roadmap(props) {
         <div className="row">
           <div className="col-12">
             <div className="block-text center">
-              <h6 className="sub-heading">
+              <h2 className="sub-heading">
                 <span>{dataBlock.subheading}</span>
-              </h6>
+              </h2>
               <h3 className="heading pdb">{dataBlock.heading}</h3>
             </div>
 
@@ -59,11 +59,11 @@ function Roadmap(props) {
               >
                 {data.map((idx) => (
                   <SwiperSlide key={idx.id}>
-                    <div className="roadmap-box">
+                    <div className="roadmap-box" >
                       <div className="time">{idx.time}</div>
                       <div className="content">
                         <h5 className="title">{idx.title}</h5>
-                        <p className="text">{idx.desc}</p>
+                        <h5 className="text">{idx.desc}</h5>
                       </div>
                     </div>
                   </SwiperSlide>

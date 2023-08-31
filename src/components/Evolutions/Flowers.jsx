@@ -160,24 +160,24 @@ function Flowers() {
               <br />
               <br />
 
-              <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
+              <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25,margin: 20, marginRight: 20, borderRadius: 20}}>
                 Growth Flowers
               </button>
               <br />
               <br />
 
-              <h4 style={{ fontSize: 30 }}>
+              <h4>
                 hyper detailed , stunning colors, front view, framed, day light, cinema 4d
               </h4>
               <br />
 
-              <h4>Sent next Flowers and discover previous creations, wait around 9 seconds to get your results</h4>
+              <h5>Sent next Flowers and discover previous creations, wait around 9 seconds to get your results</h5>
             </form>
-            <button onClick={checkout} className="btn btn-primary" style={{padding: 25, borderRadius: 20}}>
+            <button onClick={checkout} className="btn btn-primary" style={{padding: 25, margin: 20, borderRadius: 20}}>
                   Subscribe ✅ and Get Access to more Flowers 💐
             </button>
               <div className="col-md-12">
-            <button className="btn btn-secondary" onClick={() => exportComponentAsJPEG(componentRef)} style={{width: 340, height: 70, borderRadius: 20, marginTop: 30}}>
+            <button className="btn btn-secondary" onClick={() => exportComponentAsJPEG(componentRef)} style={{width: 340, height: 70, margin: 20, borderRadius: 20, marginTop: 30}}>
               Export Card as JPEG
             </button>
           </div>

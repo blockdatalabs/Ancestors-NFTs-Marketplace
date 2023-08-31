@@ -43,7 +43,20 @@ function Banner(props) {
                 />
               </div>
             </div>
+            
           </div>
+          <div className="row">
+              <div className="col-xl-12 col-md-12">
+              <div className="block-text">
+                <h2 className="heading">
+                  We help creators and teams to create 
+                  <br />
+                  <span>Custom AI Image Generators base on their Style</span>
+                  <br />{" "}
+                </h2>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </section>

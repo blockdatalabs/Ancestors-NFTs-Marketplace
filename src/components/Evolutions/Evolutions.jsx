@@ -240,8 +240,8 @@ function Evolutions() {
               </h4>
               <br />
 
-              <h2>Sent next Evolutions</h2>
-              <p>Wait around 9 seconds to get your results</p>
+              <h4>Sent next Evolutions</h4>
+              <h5>Wait around 9 seconds to get your results</h5>
             </form>
           </div>
         </div>
@@ -373,7 +373,7 @@ function Evolutions() {
               <br />
               <br />
               <br />
-              <h4>Row Generation Example:</h4>
+              <h4>Row Sample:</h4>
               <br />
               <br />
             </div>
@@ -413,7 +413,7 @@ function Evolutions() {
         <div className="row">
           <div className="col-md-4"></div>
           <div className="col-md-4">
-            <h2>Skins</h2>
+            <h2>Skins:</h2>
             <br />
             <br />
           </div>

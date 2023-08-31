@@ -47,9 +47,9 @@ function FaqPage(props) {
                               show={idx.show}
                               key={idx.id}
                               title={idx.title}
-                              className="flat-toggle h6"
+                              className="flat-toggle h2"
                             >
-                              <h4 className="toggle-content">{idx.text} </h4>
+                              <h5 className="toggle-content">{idx.text} </h5>
                             </Accordion>
                           ))}
                         </div>
@@ -62,7 +62,7 @@ function FaqPage(props) {
                               title={idx.title}
                               className="flat-toggle h6"
                             >
-                              <h4 className="toggle-content">{idx.text} </h4>
+                              <h5 className="toggle-content">{idx.text} </h5>
                             </Accordion>
                           ))}
                         </div>

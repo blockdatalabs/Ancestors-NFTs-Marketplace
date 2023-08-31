@@ -18,7 +18,7 @@ const dataRoadMap = [
     id: 3,
     time: "Question Nº 3",
     title: "Integrations",
-    desc: "Which integrations with Aurora, and/or NEAR smart contracts enhance the vision of the project?",
+    desc: "Which integrations with ETH, Aurora, NEAR smart contracts enhance the vision of the project?",
     class: "",
   },
 
@@ -26,7 +26,7 @@ const dataRoadMap = [
     id: 4,
     time: "Question Nº 4",
     title: "World Building",
-    desc: "How to enhance the world building around the tree of life? ",
+    desc: "How to enhance the world building around the tree of life, Characters and Skins? ",
     class: "right",
   },
   {
@@ -43,6 +43,13 @@ const dataRoadMap = [
     desc: "Which stats or facts are useful for the users and creators?",
     class: "",
   },
+  {
+    id: 7,
+    time: "Question Nº 7",
+    title: "Events",
+    desc: "What kind of events for the community will be worthy to celebrate?",
+    class: "",
+  }
 ];
 
 export default dataRoadMap;

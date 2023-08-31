@@ -13,7 +13,7 @@ function FlowersMarket() {
     <div className="home-3 wrapper row">
       <div className="col-md-3"></div>
       <div className="col-md-6" style={{marginTop: 200}}>
-        <h1>Flowers Framed Marketplace</h1>
+        <h1 style={{fontSize: 80, textAlign: "center"}}>Flowers Framed Marketplace</h1>
       </div>
       <div className="col-md-3"></div>
       <div className="col-md-4"></div>
