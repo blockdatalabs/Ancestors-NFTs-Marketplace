@@ -250,12 +250,12 @@ function Evolutions() {
                                 }}
                                 alt="generations"
                               />
-                              <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
                             </div>
                           </>
                         ))}
+                              <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
                       </div>
                     ),
                 )}
@@ -275,12 +275,13 @@ function Evolutions() {
                                 }}
                                 alt="generations"
                               />
-                              <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
+
                             </div>
                           </>
                         ))}
+                                                      <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
                       </div>
                     ),
                 )}
@@ -300,12 +301,13 @@ function Evolutions() {
                                 }}
                                 alt="generations"
                               />
-                              <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
+
                             </div>
                           </>
                         ))}
+                                                      <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
                       </div>
                     ),
                 )}
@@ -325,12 +327,13 @@ function Evolutions() {
                                 }}
                                 alt="generations"
                               />
-                              <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
+
                             </div>
                           </>
                         ))}
+                                                      <h5>
+                                Previous Creator Prompt: {leoImage.prompt}
+                              </h5>
                       </div>
                     ),
                 )}
