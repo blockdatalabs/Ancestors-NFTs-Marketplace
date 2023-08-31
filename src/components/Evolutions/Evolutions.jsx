@@ -6,6 +6,30 @@ import Gen2 from "../../assets/images/tree/gen2_1.jpg";
 import Gen3 from "../../assets/images/tree/gen3_1.jpg";
 import CreativeMode from "../../assets/images/tree/unlock-creative-mode.png";
 import { sequence } from "0xsequence";
+import { useWallet } from  '@mintbase-js/react'
+
+const  NearWalletConnector = () => {
+  const {
+    connect,
+    disconnect,
+    activeAccountId,
+    selector,
+    isConnected,
+    errorMessage,
+  } = useWallet();
+
+
+  if (!isConnected) {
+    return <button  onClick={connect}>Connect To NEAR</button>
+  }
+
+  return (
+    <div>
+      <p>You are connected as {activeAccountId}</p>
+      <button  onClick={disconnect}>Disconnect</button>
+    </div>
+  )
+}
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
