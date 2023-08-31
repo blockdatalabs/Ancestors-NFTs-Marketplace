@@ -11,7 +11,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const getImages = async () => {
   const urlImages = "https://ancestors.pulsarforge.io/api/images";
-  await delay(15000);
+  await delay(18000);
   const resp = await fetch(urlImages, {
     method: "GET",
     headers: { "Content-type": "application/json" },
