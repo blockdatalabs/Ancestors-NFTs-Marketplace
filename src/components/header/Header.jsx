@@ -60,7 +60,7 @@ const Header = () => {
                           data.namesub ? "menu-item-has-children" : ""
                         } ${activeIndex === idx ? "active" : ""}`}
                       >
-                        <a href={data.links}>{data.name}</a>
+                        <a href={data.links} style={{fontSize: 20}}>{data.name}</a>
                         {data.namesub && (
                           <ul className="sub-menu">
                             {data.namesub.map((submenu) => (
