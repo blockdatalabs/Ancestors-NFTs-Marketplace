@@ -6,7 +6,7 @@ const menus = [
   },
   {
     id: 2,
-    name: 'Share Tree Flowers',
+    name: 'Tree Flowers',
     links: "/share-tree-flowers",
   },
   {
@@ -16,13 +16,13 @@ const menus = [
   },
   {
     id: 4,
-    name: 'Send Feedback',
+    name: 'Feedback',
     links: "https://docs.google.com/forms/d/e/1FAIpQLSf9Cv1ja-cmk_Th4LTOb0-WvluPjAdbAJ3uPMIcVDC2xS51DQ/viewform?embedded=true",
   },
   {
     id: 5,
-    name: 'Newsletter',
-    links: "https://pulsarforge.substack.com/",
+    name: 'Developer Labs',
+    links: "https://pulsarforge.io",
   },
   {
     id: 6,
