@@ -113,90 +113,11 @@ function Evolutions() {
             {" "}
             <br /> <br /> Tree of Life calling World Builders <br /> <br />{" "}
           </h2>
-          {currentAccount === "" ? (
-            <>
-              <button
-                type="submit"
-                style={{
-                  color: "blue",
-                  width: 780,
-                  height: 80,
-                  borderRadius: 40,
-                }}
-                shape="square"
-                onClick={() => openWallet()}
-                label="Open Wallet"
-              >
-                {" "}
-                Connect wallet & Unlock Stable Diffussion XL Creative Mode{" "}
-              </button>
-
-              <img
-                src={CreativeMode}
-                style={{ border: "solid 8px", borderRadius: 40, marginTop: 40 }}
-                alt="creative mode"
-              />
-            </>
-          ) : (
-            <>
-              <div className="col-md-4">
-                <br />
-                <br />
-                <br />
-                <h4>Wallet Connected</h4>
-                <h2>Init Image: </h2>
-                <br />
-                <br />
-                <img
-                  src={InitImage}
-                  alt="Mecha Golem"
-                  style={{ width: "512px", height: "384px", borderRadius: 40 }}
-                />
-              </div>
-              <div className="col-md-8">
-                <h2>
-                  {" "}
-                  <br /> Evolve them{" "}
-                </h2>
-                <form onSubmit={handleSubmit} className="form-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="query"
-                    name="query"
-                    value={query}
-                    placeholder="Your Prompt"
-                    onChange={(event) => setQuery(event.target.value)}
-                    style={{ width: 700, height: 100 }}
-                  />
-
-                  <br />
-                  <br />
-
-                  <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
-                    Evolve them
-                  </button>
-
-                  <br />
-                  <br />
-
-                  <h4 style={{ fontSize: 30 }}>
-                    Knight protector, polygonal, front view, glowing blooming
-                    colors light runes, wearing stylized clothing, 3d, spring
-                    vibes, vray render
-                  </h4>
-                  <br />
-
-                  <h2>Sent next Evolutions</h2>
-                </form>
-              </div>
-            </>
-          )}
           <div className="col-md-4">
             <br />
             <br />
             <br />
-            <h4>Diffusion Model</h4>
+            <h4>Stable Diffusion XL Model</h4>
             <h2>Init Image: </h2>
             <br />
             <br />
