@@ -43,28 +43,8 @@ const getImages = async () => {
 };
 
 function Planets() {
-  const [query, setQuery] = useState("");
+  const [queryPlanet, setQuery] = useState("");
   const [generation, setGeneration] = useState([]);
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    // The base URL for our API
-    const url = "https://ancestors.pulsarforge.io/api";
-
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify({ query }),
-      headers: {
-        accept: "application/json",
-        "Content-type": "application/json",
-      },
-    })
-      .then((response) => response)
-      .catch((err) => console.log(err));
-
-    const results = await getImages();
-    setGeneration(results?.generations);
-  };
   const handleSubmitPlanets = async (event) => {
     event.preventDefault();
 
@@ -73,7 +53,7 @@ function Planets() {
 
     fetch(url, {
       method: "POST",
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ queryPlanet }),
       headers: {
         accept: "application/json",
         "Content-type": "application/json",
@@ -108,17 +88,13 @@ function Planets() {
             />
           </div>
           <div className="col-md-8">
-            <h2>
-              {" "}
-              <br /> Discover{" "} sites build your story
-            </h2>
             <form onSubmit={handleSubmitPlanets} className="form-group">
               <input
                 type="text"
                 className="form-control"
-                id="query"
-                name="query"
-                value={query}
+                id="queryPlanet"
+                name="queryPlanet"
+                value={queryPlanet}
                 placeholder="Write Your Prompt to discover places"
                 onChange={(event) => setQuery(event.target.value)}
                 style={{  width: 700, height: 100  }}
