@@ -4,7 +4,6 @@ import Skins from "../../assets/images/tree/skins.jpg";
 import Gen1 from "../../assets/images/tree/gen1_1.jpg";
 import Gen2 from "../../assets/images/tree/gen2_1.jpg";
 import Gen3 from "../../assets/images/tree/gen3_1.jpg";
-import { sequence } from "0xsequence";
 import { useWallet } from  '@mintbase-js/react'
 
 const  NearWalletConnector = () => {
@@ -46,27 +45,6 @@ const getImages = async () => {
 function Evolutions() {
   const [query, setQuery] = useState("");
   const [generation, setGeneration] = useState([]);
-  const [currentAccount, setCurrentAccount] = useState("");
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    // The base URL for our API
-    const url = "https://ancestors.pulsarforge.io/api";
-
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify({ query }),
-      headers: {
-        accept: "application/json",
-        "Content-type": "application/json",
-      },
-    })
-      .then((response) => response)
-      .catch((err) => console.log(err));
-
-    const results = await getImages();
-    setGeneration(results?.generations);
-  };
   const handleSubmitLeonardo = async (event) => {
     event.preventDefault();
 
@@ -86,23 +64,6 @@ function Evolutions() {
 
     const results = await getImages();
     setGeneration(results?.generations);
-  };
-  sequence.initWallet({ defaultNetwork: "polygon" });
-  const openWallet = async () => {
-    const wallet = sequence.getWallet();
-    const connectDetails = await wallet.connect({
-      app: "Ancestors Trees of Life",
-      authorize: true,
-      settings: {
-        theme: "light",
-        bannerUrl: "https://ancestors.pulsarforge.io/logo.png",
-        includedPaymentProviders: ["moonpay", "ramp"],
-        defaultFundingCurrency: "matic",
-        lockFundingCurrencyToDefault: false,
-      },
-    });
-    setCurrentAccount(connectDetails.session.accountAddress);
-    wallet.openWallet();
   };
   return (
     <section className="banner">
