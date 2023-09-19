@@ -4,7 +4,6 @@ import Skins from "../../assets/images/tree/skins.jpg";
 import Gen1 from "../../assets/images/tree/gen1_1.jpg";
 import Gen2 from "../../assets/images/tree/gen2_1.jpg";
 import Gen3 from "../../assets/images/tree/gen3_1.jpg";
-import CreativeMode from "../../assets/images/tree/unlock-creative-mode.png";
 import { sequence } from "0xsequence";
 import { useWallet } from  '@mintbase-js/react'
 
@@ -117,7 +116,7 @@ function Evolutions() {
             <br />
             <br />
             <br />
-            <h4>Stable Diffusion XL Model</h4>
+            <h4>Stable Diffusion XL</h4>
             <h2>Init Image: </h2>
             <br />
             <br />
@@ -155,9 +154,7 @@ function Evolutions() {
               <br />
 
               <h4 style={{ fontSize: 30 }}>
-                Knight protector, polygonal, front view, glowing blooming colors
-                light runes, wearing stylized clothing, 3d, spring vibes, vray
-                render
+                Knight protector, polygonal, front view, glowing blooming colors, 3d, vray render
               </h4>
               <br />
 
@@ -199,84 +196,6 @@ function Evolutions() {
                           </>
                         ))}
                               <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
-                      </div>
-                    ),
-                )}
-                {generation.map(
-                  (leoImage, index) =>
-                    index === 1 && (
-                      <div className="row" key={index}>
-                        {leoImage.generated_images.map((leoGenerate, idx) => (
-                          <>
-                            <div className="col-md-4" key={idx}>
-                              <h2>Gen {idx + 1}</h2>
-                              <img
-                                src={leoGenerate?.url}
-                                style={{
-                                  width: "75%",
-                                  borderRadius: 40,
-                                }}
-                                alt="generations"
-                              />
-
-                            </div>
-                          </>
-                        ))}
-                                                      <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
-                      </div>
-                    ),
-                )}
-                {generation.map(
-                  (leoImage, index) =>
-                    index === 2 && (
-                      <div className="row" key={index}>
-                        {leoImage.generated_images.map((leoGenerate, idx) => (
-                          <>
-                            <div className="col-md-4" key={idx}>
-                              <h2>Gen {idx + 1}</h2>
-                              <img
-                                src={leoGenerate?.url}
-                                style={{
-                                  width: "75%",
-                                  borderRadius: 40,
-                                }}
-                                alt="generations"
-                              />
-
-                            </div>
-                          </>
-                        ))}
-                                                      <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
-                      </div>
-                    ),
-                )}
-                {generation.map(
-                  (leoImage, index) =>
-                    index === 3 && (
-                      <div className="row" key={index}>
-                        {leoImage.generated_images.map((leoGenerate, idx) => (
-                          <>
-                            <div className="col-md-4" key={idx}>
-                              <h2>Gen {idx + 1}</h2>
-                              <img
-                                src={leoGenerate?.url}
-                                style={{
-                                  width: "75%",
-                                  borderRadius: 40,
-                                }}
-                                alt="generations"
-                              />
-
-                            </div>
-                          </>
-                        ))}
-                                                      <h5>
                                 Previous Creator Prompt: {leoImage.prompt}
                               </h5>
                       </div>
