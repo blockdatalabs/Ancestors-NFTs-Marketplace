@@ -65,7 +65,7 @@ function Planets() {
     const results = await getImages();
     setGeneration(results?.generations);
   };
-  const handleSubmitLeonardo = async (event) => {
+  const handleSubmitPlanets = async (event) => {
     event.preventDefault();
 
     // The base URL for our API
@@ -110,9 +110,9 @@ function Planets() {
           <div className="col-md-8">
             <h2>
               {" "}
-              <br /> Discover{" "}
+              <br /> Discover{" "} sites build your story
             </h2>
-            <form onSubmit={handleSubmitLeonardo} className="form-group">
+            <form onSubmit={handleSubmitPlanets} className="form-group">
               <input
                 type="text"
                 className="form-control"
