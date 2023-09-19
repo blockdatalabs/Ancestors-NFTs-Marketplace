@@ -43,7 +43,7 @@ const getImages = async () => {
 };
 
 function Planets() {
-  const [queryPlanet, setQuery] = useState("");
+  const [queryPlanet, setQueryPlanet] = useState("");
   const [generation, setGeneration] = useState([]);
   const handleSubmitPlanets = async (event) => {
     event.preventDefault();
@@ -96,7 +96,7 @@ function Planets() {
                 name="queryPlanet"
                 value={queryPlanet}
                 placeholder="Write Your Prompt to discover places"
-                onChange={(event) => setQuery(event.target.value)}
+                onChange={(event) => setQueryPlanet(event.target.value)}
                 style={{  width: 700, height: 100  }}
               />
 
