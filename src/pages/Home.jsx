@@ -5,6 +5,7 @@ import Banner from "../components/banner/Banner";
 import dataRoadMap from "../assets/data/data-roadmap";
 import Footer from "../components/footer/Footer";
 import Evolutions from "../components/Evolutions/Evolutions";
+import Planets from "../components/Evolutions/Planets";
 
 function Home() {
   return (
@@ -13,6 +14,8 @@ function Home() {
 
       <Evolutions />
 
+      <Planets />
+      
       <Roadmap data={dataRoadMap} />
 
       <FAQs />
