@@ -1,5 +1,6 @@
 import React from "react";
 import TreeOfLife from "../../assets/images/tree/UI-FLOW.gif";
+import NEARWalletConnector from "../near-wallet/NEARWalletConnector";
 
 function Banner(props) {
   return (
@@ -18,11 +19,7 @@ function Banner(props) {
                 </h2>
                 <div className="row">
                   <div className="col-xl-12 col-md-12">
-                    <iframe
-                      src="https://tree-component-v1.pages.dev"
-                      style={{ width: 400, height: 400, marginLeft: 140 }}
-                      title="Tree possibilities"
-                    ></iframe>
+                    <NEARWalletConnector />
                   </div>
                 </div>
               </div>

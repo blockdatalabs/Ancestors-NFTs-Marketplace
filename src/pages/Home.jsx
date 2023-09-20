@@ -6,6 +6,7 @@ import dataRoadMap from "../assets/data/data-roadmap";
 import Footer from "../components/footer/Footer";
 import Evolutions from "../components/Evolutions/Evolutions";
 import Planets from "../components/Evolutions/Planets";
+import NEARWalletConnector from "../components/near-wallet/NEARWalletConnector";
 
 function Home() {
   return (
