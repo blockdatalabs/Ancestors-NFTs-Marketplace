@@ -4,8 +4,8 @@ import Roadmap from "../components/roadmap/Roadmap";
 import Banner from "../components/banner/Banner";
 import dataRoadMap from "../assets/data/data-roadmap";
 import Footer from "../components/footer/Footer";
-import Evolutions from "../components/Evolutions/Evolutions";
-import Planets from "../components/Evolutions/Planets";
+import Evolutions from "../components/generators/Evolutions";
+import Planets from "../components/generators/Planets";
 import NEARWalletConnector from "../components/near-wallet/NEARWalletConnector";
 
 function Home() {

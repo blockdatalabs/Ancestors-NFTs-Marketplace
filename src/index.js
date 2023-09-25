@@ -4,15 +4,17 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import './App.scss'
 import ScrollToTop from "./ScrollToTop";
-import { ThirdwebProvider, metamaskWallet, coinbaseWallet, walletConnect } from "@thirdweb-dev/react";
+import { setupAuthWallet } from "@mintbase-js/wallet";
 import { WalletContextProvider } from '@mintbase-js/react'
 import '@near-wallet-selector/modal-ui/styles.css';
-import { Polygon } from "@thirdweb-dev/chains";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(            
-    <WalletContextProvider>  
+    <WalletContextProvider
+        contractAddress="woaps.mintbase1.near"
+        network="mainnet"
+    >
         <React.Fragment>
             <BrowserRouter>
                 <ScrollToTop />

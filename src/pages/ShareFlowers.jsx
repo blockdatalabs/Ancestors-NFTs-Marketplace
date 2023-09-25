@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../components/footer/Footer";
-import Flowers from "../components/Evolutions/Flowers";
+import Flowers from "../components/generators/Flowers";
 
 function ShareFlowers() {
 

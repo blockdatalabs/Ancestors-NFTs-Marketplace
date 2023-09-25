@@ -1,10 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import { exportComponentAsJPEG} from 'react-component-export-image';
+import { uploadReference } from "@mintbase-js/storage";
+import { exportComponentAsJPEG} from "react-component-export-image";
 import Gen1 from "../../assets/images/tree/init-flower-1.jpg";
 import Gen2 from "../../assets/images/tree/init-flower-2.jpg";
 import Gen3 from "../../assets/images/tree/init-flower-3.jpg";
 import Logo from "../../assets/images/logo/logo-header.png";
-
+import { useWallet } from  '@mintbase-js/react'
+import { execute, mint } from '@mintbase-js/sdk';
+import NEARWalletConnector from "../near-wallet/NEARWalletConnector";
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const getImages = async () => {
@@ -39,6 +42,38 @@ function Flowers() {
   const [locked, setLocked] = useState("pending");
   const [image, setImage] = useState(null);
   const [textInputs, setTextInputs] = useState([]);
+  const [file, setFile] = useState(null);
+  const { selector } = useWallet();
+  
+  const handleMint = async () => {
+
+    const wallet = await selector.wallet();
+    const reference = await handleSubmitFile(file);
+    await execute(
+      mint({
+        noMedia: true,
+         contractAddress: "woaps.mintbase1.near",
+         metadata: {title:"Ancestors",reference:"fn6y3rhe4nYDG4GUu6w95tZovK8pqPoI-hGUG--zVTI"},
+         ownerId: "pulsarforge.near" }),
+      { wallet },   
+    );
+  };
+  const handleChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const handleSubmitFile = async (e) => {
+    e.preventDefault();
+    if (!file) return;
+    //call storage method to upload file to arweave
+    const metadata = {
+    title: "Ancestors",
+    media: file
+  }
+    const uploadResult = await uploadReference(metadata);
+    console.log("https://arweave.net/" + uploadResult.id)
+    return uploadResult.id;
+  };
 
   const handleAddTextInput = () => {
     setTextInputs([...textInputs, '']);
@@ -427,7 +462,7 @@ function Flowers() {
           ) : (
             <h4>Submit, wait and get the species evolutions</h4>
           )}
-
+        <NEARWalletConnector />
         </div>
       </div>
 
