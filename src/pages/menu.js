@@ -18,6 +18,11 @@ const menus = [
     id: 4,
     name: 'Developer Labs',
     links: "https://pulsarforge.io",
+  },
+  {
+    id: 5,
+    name: 'Discord',
+    links: "https://discord.com/invite/4mXg6QSyY8",
   }
 ];
 
