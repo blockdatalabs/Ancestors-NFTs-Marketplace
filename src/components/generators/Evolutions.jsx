@@ -130,7 +130,7 @@ function Evolutions() {
               <div className="row">
                 <div className="col-md-2"></div>
                 <div className="col-md-8">
-                  <h4>After hit the button, scroll to discover previous mecha creations:</h4>
+                  <h4>After hit the button, scroll  and wait to discover your character creations:</h4>
                   <br />
                   <br />
                 </div>
