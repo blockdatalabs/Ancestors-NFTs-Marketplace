@@ -167,54 +167,11 @@ function Evolutions() {
           ) : (
             <h4>Submit, wait and get the species evolutions</h4>
           )}
-          <div className="row">
-            <div className="col-md-4"></div>
-            <div className="col-md-4">
-              <br />
-              <br />
-              <br />
-              <br />
-              <h4>Row Sample:</h4>
-              <br />
-              <br />
-            </div>
-            <div className="col-md-4"></div>
-          </div>
-
-          <div className="row">
-            <div className="col-md-4">
-              <h2>Gen1</h2>
-              <br />
-              <img
-                src={Gen1}
-                alt="skins of one evolution"
-                style={{ width: "100%", borderRadius: 40 }}
-              />
-            </div>
-            <div className="col-md-4">
-              <h2>Gen2</h2>
-              <br />
-              <img
-                src={Gen2}
-                alt="skins of one evolution"
-                style={{ width: "100%", borderRadius: 40 }}
-              />
-            </div>
-            <div className="col-md-4">
-              <h2>Gen3</h2>
-              <br />
-              <img
-                src={Gen3}
-                alt="skins of one evolution"
-                style={{ width: "100%", borderRadius: 40 }}
-              />
-            </div>
-          </div>
         </div>
         <div className="row">
           <div className="col-md-4"></div>
           <div className="col-md-4">
-            <h2>Skins:</h2>
+            <h4>Skins character multi variations</h4>
             <br />
             <br />
           </div>

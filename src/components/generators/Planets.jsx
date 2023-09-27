@@ -126,7 +126,7 @@ function Planets() {
               <div className="row">
                 <div className="col-md-2"></div>
                 <div className="col-md-8">
-                  <h4>After hit the button and wait, scroll to discover your flowers creations:</h4>
+                  <h4>After hit the button and wait, scroll to discover your environments creations:</h4>
                   <br />
                   <br />
                 </div>
