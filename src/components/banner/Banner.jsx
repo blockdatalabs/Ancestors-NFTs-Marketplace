@@ -12,7 +12,7 @@ function Banner(props) {
             <div className="banner__left">
               <div className="block-text">
                 <h2 className="heading">
-                  Infinity possibilities at Trees of Life
+                  Trees of Life
                   <br />
                   <span>Create, Growth and Collect Them</span>
                   <br />{" "}
@@ -48,7 +48,7 @@ function Banner(props) {
                 <h2 className="heading">
                   We help creators and teams to create 
                   <br />
-                  <span>Custom AI Image Generators base on their Style</span>
+                  <span>Custom AI Image Generators to mint collectibles based on their style</span>
                   <br />{" "}
                 </h2>
                 </div>
