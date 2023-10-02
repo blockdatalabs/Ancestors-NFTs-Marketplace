@@ -14,6 +14,7 @@ const  NEARWalletConnector = () => {
     errorMessage,
   } = useWallet();
   const [file, setFile] = useState(null);
+  const [fileName, setFileName] = useState('');
   const [image, setImage] = useState(null);
   const [fileReference, setFileReference] = useState(null);
   const handleMint = async () => {
@@ -34,7 +35,7 @@ const  NEARWalletConnector = () => {
     if (!file) return;
     //call storage method to upload file to arweave
     const metadata = {
-    title: "Ancestors",
+    title: "Ancestors " + fileName,
     media: file
   }
     const uploadResult = await uploadReference(metadata);
@@ -43,6 +44,7 @@ const  NEARWalletConnector = () => {
   };
   const handleChange = (e) => {
     setFile(e.target.files[0]);
+    setFileName(e.target.files[0].name)
   };
   const handleDrop = (e) => {
     e.preventDefault();
@@ -75,9 +77,6 @@ const  NEARWalletConnector = () => {
           <button className="btn btn-primary" style={{width: 500, padding: 25, marginRight: 20, borderRadius: 20}} onClick={disconnect}>Disconnect</button>
         </div>
         <div>
-      <button style={{color: "blue", width: 500, padding: 25, marginTop: 20, marginLeft: 25, borderRadius: 20}} onClick={handleMint}>
-        Mint
-      </button>
       <form onSubmit={handleSubmitFile}>
         <input style={{color: "blue", width: 500, padding: 25, marginTop: 20, marginLeft: 25, borderRadius: 20}} onClick={handleMint} type="file" onChange={handleChange} />
         <button
@@ -87,6 +86,9 @@ const  NEARWalletConnector = () => {
           Upload
         </button>
       </form>
+      <button style={{color: "blue", width: 500, padding: 25, marginTop: 20, marginLeft: 25, borderRadius: 20}} onClick={handleMint}>
+        Mint
+      </button>
     </div>
     </section>
   )
