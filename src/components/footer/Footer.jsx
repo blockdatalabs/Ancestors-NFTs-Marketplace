@@ -47,7 +47,7 @@ function Footer(props) {
                     <Link to="/share-tree-flowers">Share</Link>
                   </li>
                   <li>
-                    <Link to="/flowers-market">Marketplace</Link>
+                    <Link to="/flowers-market">Flowers Marketplace</Link>
                   </li>
                   <li>
                     <a href="https://pulsarforge.io">Developed at pulsarforge.io</a>
