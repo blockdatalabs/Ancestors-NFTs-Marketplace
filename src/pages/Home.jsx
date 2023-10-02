@@ -19,8 +19,6 @@ function Home() {
       
       <Roadmap data={dataRoadMap} />
 
-      <FAQs />
-
       <Footer />
     </div>
   );
