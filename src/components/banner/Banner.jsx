@@ -21,7 +21,7 @@ function Banner(props) {
                   <div className="col-xl-12 col-md-12">
 
                   <div className="block-text">
-                    <a href="https://www.mintbase.xyz/contract/woaps.mintbase1.near/nfts/all/0" target="_blank"><h2 className="heading">WOAPs Mintbase Collection</h2></a>
+                    <a href="https://www.mintbase.xyz/contract/woaps.mintbase1.near/nfts/all/0" target="_blank" rel="noreferrer"><h2 className="heading">WOAPs Mintbase Collection</h2></a>
                   </div>
                     <NEARWalletConnector />
                   </div>
