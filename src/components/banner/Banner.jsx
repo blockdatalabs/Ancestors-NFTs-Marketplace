@@ -12,10 +12,10 @@ function Banner(props) {
             <div className="banner__left">
               <div className="block-text">
                 <h2 className="heading">
-                  Trees of Life
-                  <br />
-                  <span>Create, Growth and Collect Them</span>
+                  Ancestors Trees of Life.
+                  Create, growth and collect them
                   <br />{" "}
+                  <span>Evolutions, Skins & Environments</span>
                 </h2>
                 <div className="row">
                   <div className="col-xl-12 col-md-12">
@@ -28,10 +28,12 @@ function Banner(props) {
           <div className="col-xl-6 col-md-6">
             <div className="banner__left">
               <div className="block-text">
-                <h2 className="heading">
-                  <span>Ancestors Evolutions & Skins </span>
+              <h2 className="heading">
+                  <span>We guide creators and teams to create </span>
                   <br />
-                  Only the choosen Step Up
+                  Collectibles to Mint
+                  <br />{" "}
+                  Based on custom AI image generators
                 </h2>
                 <img
                   src={TreeOfLife}
@@ -48,7 +50,7 @@ function Banner(props) {
                 <h2 className="heading">
                   We help creators and teams to create 
                   <br />
-                  <span>Custom AI Image Generators to mint collectibles based on their style</span>
+                  <span>Custom AI image generators to mint collectibles based on their style</span>
                   <br />{" "}
                 </h2>
                 </div>
