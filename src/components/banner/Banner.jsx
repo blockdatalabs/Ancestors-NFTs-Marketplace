@@ -19,6 +19,10 @@ function Banner(props) {
                 </h2>
                 <div className="row">
                   <div className="col-xl-12 col-md-12">
+
+                  <div className="block-text">
+                    <a href="https://www.mintbase.xyz/contract/woaps.mintbase1.near/nfts/all/0" target="_blank"><h2 className="heading">WOAPs Mintbase Collection</h2></a>
+                  </div>
                     <NEARWalletConnector />
                   </div>
                 </div>
@@ -44,18 +48,6 @@ function Banner(props) {
             </div>
             
           </div>
-          <div className="row">
-              <div className="col-xl-12 col-md-12">
-              <div className="block-text">
-                <h2 className="heading">
-                  We help creators and teams to create 
-                  <br />
-                  <span>Custom AI image generators to mint collectibles based on their style</span>
-                  <br />{" "}
-                </h2>
-                </div>
-              </div>
-            </div>
         </div>
       </div>
     </section>
