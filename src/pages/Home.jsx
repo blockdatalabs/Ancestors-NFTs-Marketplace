@@ -7,12 +7,15 @@ import Footer from "../components/footer/Footer";
 import Evolutions from "../components/generators/Evolutions";
 import Planets from "../components/generators/Planets";
 import NEARWalletConnector from "../components/near-wallet/NEARWalletConnector";
+import Mecha from "../components/generators/Mecha";
 
 function Home() {
   return (
     <div className="home-3 wrapper">
       <Banner />
 
+      <Mecha />
+      
       <Evolutions />
 
       <Planets />
