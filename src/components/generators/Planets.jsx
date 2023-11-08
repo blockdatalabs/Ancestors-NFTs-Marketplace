@@ -69,7 +69,7 @@ function Planets() {
     <section className="banner">
       <div className="container big">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-12">
             <br />
             <br />
             <br />
@@ -80,7 +80,7 @@ function Planets() {
           <div style={{ marginTop: 80, marginBottom: 80 }}>
           {generation ? (
             <>
-              <div className="col-md-8">
+              <div className="col-md-12">
               {generation.map(
                   (leoImage, index) =>
                     index === 0 && (
@@ -92,7 +92,7 @@ function Planets() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "75%",
+                                  width: "90%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -126,7 +126,7 @@ function Planets() {
                 value={queryPlanet}
                 placeholder="Write Your Prompt to discover arenas"
                 onChange={(event) => setQueryPlanet(event.target.value)}
-                style={{  width: 700, height: 100  }}
+                style={{  width: "100%", height: 100  }}
               />
 
               <br />
