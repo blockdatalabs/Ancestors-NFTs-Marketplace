@@ -76,11 +76,6 @@ function Planets() {
             <h2>Battle Ground: </h2>
             <br />
             <br />
-            <img
-              src={InitImage}
-              alt="Environment"
-              style={{ width: "412px", height: "412px", borderRadius: 40 }}
-            />
           </div>
           <div style={{ marginTop: 80, marginBottom: 80 }}>
           {generation ? (
