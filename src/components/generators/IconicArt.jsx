@@ -45,7 +45,7 @@ function Evolutions() {
     event.preventDefault();
 
     // The base URL for our API
-    const url = "https://ancestors.pulsarforge.io/api/diffusion";
+    const url = "https://ancestors.pulsarforge.io/api/iconic-art";
 
     fetch(url, {
       method: "POST",
@@ -70,7 +70,7 @@ function Evolutions() {
             <img
               src={InitImage}
               alt="Mecha Golem"
-              style={{ width: "412px", height: "284px", borderRadius: 40 }}
+              style={{ width: "512px", height: "680px", borderRadius: 40 }}
             />
           </div>
           <div className="col-md-8">
@@ -113,7 +113,7 @@ function Evolutions() {
           <div className="col-md-12">
             <h2>
               {" "}
-              <br /> Evolve them{" "}
+              <br /> Sculptor take your tools{" "}
             </h2>
             <form onSubmit={handleSubmitLeonardo} className="form-group">
               <input
