@@ -1,66 +1,44 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import TreeOfLife from "../../assets/images/tree/UI-FLOW.gif";
+import NEARWalletConnector from "../near-wallet/NEARWalletConnector";
 
-import logo from "../../assets/images/logo/logo.png";
-
-function Footer(props) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 500) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
+function Banner(props) {
   return (
-    <footer className="footer">
-      <div className="shape"></div>
-      <div className="container">
+    <section className="banner">
+      <div className="shape right"></div>
+      <div className="container big">
         <div className="row">
-          <div className="col-md-12">
-            <div className="footer__bottom">
-              <Link to="/" className="logo">
-                <img src={logo} alt="Ancestors" />
-              </Link>
-
-              <div className="center mb--30">
-                <ul className="list">
-                  <li>
-                    <Link to="/">AI Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/share-tree-flowers">Kudos</Link>
-                  </li>
-                </ul>
-                <h5>Ancestors All Rights Reserved</h5>
+          <div className="col-xl-6 col-md-6">
+            <div className="banner__left">
+              <div className="block-text">
+                <h2 className="heading">
+                  Glimpse of AI Art experiences.
+                </h2>
+                <h4 className="heading">
+                  Kudos, Iconic Art, Gallery Art Styles, Ankemons Cards.
+                </h4>
               </div>
             </div>
           </div>
-        </div>
+          <div className="col-xl-6 col-md-6">
+          <div className="banner__left">
+              <div className="block-text">
+          <img
+            src={TreeOfLife}
+            alt="tree of life"
+            style={{ border: "12px double", width: "500px", height: "auto", borderRadius: 40 }}
+          />
+          <div className="block-text">
+            <a href="https://www.mintbase.xyz/contract/woaps.mintbase1.near/nfts/all/0" target="_blank" rel="noreferrer"><h4 className="heading">Minter WOAPs Collection</h4></a>
+          </div>
+            <NEARWalletConnector />
+          </div>
+          </div>
+      </div>       
       </div>
-
-      {isVisible && (
-        <Link to="#" onClick={scrollToTop} id="scroll-top">
-          <span className="icon-arrow-top"></span>
-        </Link>
-      )}
-    </footer>
+      </div>
+    </section>
   );
 }
 
-export default Footer;
+export default Banner;
