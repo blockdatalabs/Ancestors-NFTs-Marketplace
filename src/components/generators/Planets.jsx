@@ -82,40 +82,10 @@ function Planets() {
               style={{ width: "412px", height: "412px", borderRadius: 40 }}
             />
           </div>
-          <div className="col-md-8">
-            <br />
-            <br />
-            <br />
-            <br />
-            <form onSubmit={handleSubmitPlanets} className="form-group">
-              <input
-                type="text"
-                className="form-control"
-                id="queryPlanet"
-                name="queryPlanet"
-                value={queryPlanet}
-                placeholder="Write Your Prompt to discover arenas"
-                onChange={(event) => setQueryPlanet(event.target.value)}
-                style={{  width: 700, height: 100  }}
-              />
-
-              <br />
-              <br />
-
-              <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
-                Create your combat arena, choose wisely
-              </button>
-
-              <br />
-              <br />
-              <br />
-            </form>
-          </div>
-        </div>
-        <div className="row" style={{ marginTop: 80, marginBottom: 80 }}>
+          <div style={{ marginTop: 80, marginBottom: 80 }}>
           {generation ? (
             <>
-              <div className="row">
+              <div className="col-md-8">
               {generation.map(
                   (leoImage, index) =>
                     index === 0 && (
@@ -147,6 +117,37 @@ function Planets() {
             <h4>Submit, wait and get the species evolutions</h4>
           )}
       </div>
+          <div className="col-md-12">
+            <br />
+            <br />
+            <br />
+            <br />
+            <form onSubmit={handleSubmitPlanets} className="form-group">
+              <input
+                type="text"
+                className="form-control"
+                id="queryPlanet"
+                name="queryPlanet"
+                value={queryPlanet}
+                placeholder="Write Your Prompt to discover arenas"
+                onChange={(event) => setQueryPlanet(event.target.value)}
+                style={{  width: 700, height: 100  }}
+              />
+
+              <br />
+              <br />
+
+              <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
+                Create your combat arena, choose wisely
+              </button>
+
+              <br />
+              <br />
+              <br />
+            </form>
+          </div>
+        </div>
+
     </div>
     </section>
   );
