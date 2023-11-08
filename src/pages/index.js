@@ -1,3 +1,4 @@
+import IconicArt from "../components/generators/IconicArt";
 import BearsBuilders from "./BearsBuilders";
 import CollectiblesAnkemons from "./CollectiblesAnkemons";
 import FlowersMarket from "./FlowersMarket";
