@@ -64,7 +64,7 @@ const  NEARWalletConnector = () => {
     return (
         <section className="banner">
             <div className="container big">
-                <button className="btn btn-primary" style={{width: 500, padding: 25, marginRight: 20, borderRadius: 20}}  onClick={connect}>Connect To NEAR</button>
+                <button className="btn btn-primary" style={{width: 300, padding: 25, marginRight: 20, borderRadius: 20}}  onClick={connect}>Connect To NEAR</button>
                 </div>
         </section>
     )

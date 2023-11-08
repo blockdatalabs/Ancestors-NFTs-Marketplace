@@ -69,25 +69,24 @@ function Planets() {
     <section className="banner">
       <div className="container big">
         <div className="row">
-          <h2>
-            {" "}
-            <br /> <br /> Past, present and future places build your story <br /> <br />{" "}
-          </h2>
           <div className="col-md-4">
             <br />
             <br />
             <br />
-            <h4>Custom trained environment model</h4>
-            <h2>Sample: </h2>
+            <h2>Battle Ground: </h2>
             <br />
             <br />
             <img
               src={InitImage}
               alt="Environment"
-              style={{ width: "512px", height: "512px", borderRadius: 40 }}
+              style={{ width: "412px", height: "412px", borderRadius: 40 }}
             />
           </div>
           <div className="col-md-8">
+            <br />
+            <br />
+            <br />
+            <br />
             <form onSubmit={handleSubmitPlanets} className="form-group">
               <input
                 type="text"
@@ -95,7 +94,7 @@ function Planets() {
                 id="queryPlanet"
                 name="queryPlanet"
                 value={queryPlanet}
-                placeholder="Write Your Prompt to discover places"
+                placeholder="Write Your Prompt to discover arenas"
                 onChange={(event) => setQueryPlanet(event.target.value)}
                 style={{  width: 700, height: 100  }}
               />
@@ -104,34 +103,18 @@ function Planets() {
               <br />
 
               <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
-                Evolve them
+                Create your combat arena, choose wisely
               </button>
 
               <br />
               <br />
-
-              <h4 style={{ fontSize: 30 }}>
-                alien planets, city, water, mountains, energy balls, cinema 4d
-              </h4>
               <br />
-
-              <h4>Discover the past, present and future places of your story</h4>
-              <h5>Wait around 9 seconds to get your results</h5>
             </form>
           </div>
         </div>
         <div className="row" style={{ marginTop: 80, marginBottom: 80 }}>
           {generation ? (
             <>
-              <div className="row">
-                <div className="col-md-2"></div>
-                <div className="col-md-8">
-                  <h4>After hit the button and wait, scroll to discover your environments creations:</h4>
-                  <br />
-                  <br />
-                </div>
-                <div className="col-md-2"></div>
-              </div>
               <div className="row">
               {generation.map(
                   (leoImage, index) =>

@@ -13,8 +13,6 @@ function Home() {
   return (
     <div className="home-3 wrapper">
       <Banner />
-
-      <Mecha />
       
       <Evolutions />
 
