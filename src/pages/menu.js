@@ -12,7 +12,7 @@ const menus = [
   {
     id: 3,
     name: 'Iconic Art',
-    links: "/",
+    links: "/iconic-art",
   },
   {
     id: 4,

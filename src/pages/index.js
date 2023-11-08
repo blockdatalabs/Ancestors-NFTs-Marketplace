@@ -9,7 +9,8 @@ const routes = [
     { path: "/share-tree-flowers", component: <ShareFlowers /> },
     { path: "/flowers-market", component: <FlowersMarket /> },
     { path: "/bears-builders", component: <BearsBuilders /> },
-    { path: "/ankemons-cards", component: <CollectiblesAnkemons /> }
+    { path: "/ankemons-cards", component: <CollectiblesAnkemons /> },
+    { path: "/iconic-art", component: <IconicArt /> }
 ];
 
 export default routes;

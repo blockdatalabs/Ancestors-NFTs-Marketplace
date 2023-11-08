@@ -43,17 +43,17 @@ const getImages = async () => {
 };
 
 function IconicArt() {
-  const [query, setQuery] = useState("");
+  const [queryPlanet, setQueryPlanet] = useState("");
   const [generation, setGeneration] = useState([]);
   const handleSubmitLeonardo = async (event) => {
     event.preventDefault();
 
     // The base URL for our API
-    const url = "https://ancestors.pulsarforge.io/api/diffusion";
+    const url = "https://ancestors.pulsarforge.io/api/iconic-art";
 
     fetch(url, {
       method: "POST",
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ queryPlanet }),
       headers: {
         accept: "application/json",
         "Content-type": "application/json",
