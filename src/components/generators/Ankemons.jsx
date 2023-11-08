@@ -114,7 +114,7 @@ function Ankemons() {
     event.preventDefault();
 
     // The base URL for our API
-    const url = "https://ancestors.pulsarforge.io/api/flowers";
+    const url = "https://ancestors.pulsarforge.io/api/ankemons";
 
     fetch(url, {
       method: "POST",
