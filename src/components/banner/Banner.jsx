@@ -41,10 +41,10 @@ function Banner(props) {
               <br />>
               <br />>
               <br />>
-              <h5> What can you achieve with AI Art?</h5>
-              <h5>Create consistent and new art styles.</h5>
-              <h5>Transform into an skillful artist without spent 10.000 hours.</h5>
-              <h5>Create an art legacy for generations to come.</h5>
+              <h4> What can you achieve with AI Art?</h4>
+              <h4>Create consistent and new art styles.</h4>
+              <h4>Transform into an skillful artist without spent 10.000 hours.</h4>
+              <h4>Create an art legacy for generations to come.</h4>
               <br />>
               <br />>
               <br />>
