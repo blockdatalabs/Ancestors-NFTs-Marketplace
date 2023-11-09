@@ -17,7 +17,7 @@ const menus = [
   {
     id: 4,
     name: 'Gallery Art Styles',
-    links: "/",
+    links: "/art-gallery",
   },
   {
     id: 5,

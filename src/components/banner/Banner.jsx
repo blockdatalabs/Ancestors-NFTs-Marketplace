@@ -38,11 +38,16 @@ function Banner(props) {
       </div> 
       <div className="row">
             <div className="col-xl-12 col-md-12">
+              <br />>
+              <br />>
+              <br />>
               <h5> What can you achieve with AI Art?</h5>
               <h5>Create consistent and new art styles.</h5>
               <h5>Transform into an skillful artist without spent 10.000 hours.</h5>
               <h5>Create an art legacy for generations to come.</h5>
-              <h3></h3>
+              <br />>
+              <br />>
+              <br />>
             </div>
           </div>      
       </div>
