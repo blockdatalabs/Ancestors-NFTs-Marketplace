@@ -11,9 +11,16 @@ import T21 from "../assets/images/gallery/21.jpg";
 import T23 from "../assets/images/gallery/23.jpg";
 import T24 from "../assets/images/gallery/24.jpg";
 import T25 from "../assets/images/gallery/25.jpg";
-import T30 from "../assets/images/gallery/23.jpg";
-import T31 from "../assets/images/gallery/24.jpg";
-import T33 from "../assets/images/gallery/25.jpg";
+import T30 from "../assets/images/gallery/30.jpg";
+import T31 from "../assets/images/gallery/31.jpg";
+import T33 from "../assets/images/gallery/33.jpg";
+import T46 from "../assets/images/gallery/46.jpg";
+import T47 from "../assets/images/gallery/47.jpg";
+import T48 from "../assets/images/gallery/48.jpg";
+import T57 from "../assets/images/gallery/57.jpg";
+import T59 from "../assets/images/gallery/59.jpg";
+import T61 from "../assets/images/gallery/61.jpg";
+
 function GalleryArt() {
     return(
         <>
@@ -69,6 +76,24 @@ function GalleryArt() {
             </div>
             <div className="col-md-4">
                 <img src={T33} style={{width: "90%"}}/>
+            </div>
+            <div className="col-md-4">
+                <img src={T46} style={{width: "90%"}}/>
+            </div>
+            <div className="col-md-4">
+                <img src={T47} style={{width: "90%"}}/>
+            </div>
+            <div className="col-md-4">
+                <img src={T48} style={{width: "90%"}}/>
+            </div>
+            <div className="col-md-4">
+                <img src={T57} style={{width: "90%"}}/>
+            </div>
+            <div className="col-md-4">
+                <img src={T59} style={{width: "90%"}}/>
+            </div>
+            <div className="col-md-4">
+                <img src={T61} style={{width: "90%"}}/>
             </div>
          </div>
         </>
