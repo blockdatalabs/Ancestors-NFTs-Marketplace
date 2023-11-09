@@ -120,11 +120,11 @@ function Evolutions() {
               <input
                 type="text"
                 className="form-control"
-                id="query"
-                name="query"
-                value={query}
+                id="queryPlanet"
+                name="queryPlanet"
+                value={queryPlanet}
                 placeholder="Write Your Prompt to Create Evolutions"
-                onChange={(event) => setQuery(event.target.value)}
+                onChange={(event) => setQueryPlanet(event.target.value)}
                 style={{  width: "100%", height: 100  }}
               />
 
