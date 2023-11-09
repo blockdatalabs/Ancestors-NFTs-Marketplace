@@ -39,7 +39,7 @@ const getImages = async () => {
 };
 
 function Evolutions() {
-  const [query, setQuery] = useState("");
+  const [queryPlanet, setQueryPlanet] = useState("");
   const [generation, setGeneration] = useState([]);
   const handleSubmitLeonardo = async (event) => {
     event.preventDefault();
@@ -49,7 +49,7 @@ function Evolutions() {
 
     fetch(url, {
       method: "POST",
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ queryPlanet }),
       headers: {
         accept: "application/json",
         "Content-type": "application/json",
