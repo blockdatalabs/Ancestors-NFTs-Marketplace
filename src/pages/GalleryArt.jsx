@@ -1,4 +1,4 @@
-import T1 from "../assets/images/gallery/0.jpeg";
+import T1 from "../assets/images/gallery/0.jpg";
 
 function GalleryArt() {
     return(
