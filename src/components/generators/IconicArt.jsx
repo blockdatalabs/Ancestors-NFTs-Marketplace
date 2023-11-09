@@ -65,14 +65,7 @@ function Evolutions() {
     <section className="banner">
       <div className="container big">
         <div className="row">
-          <div className="col-md-4">
-            <h4>Init Image: </h4>
-            <img
-              src={InitImage}
-              alt="Mecha Golem"
-              style={{ width: "512px", height: "680px", borderRadius: 40 }}
-            />
-          </div>
+
           <div className="col-md-8">
           {generation ? (
             <>
@@ -109,6 +102,14 @@ function Evolutions() {
           ) : (
             <h4>Submit, wait and get the species evolutions</h4>
           )}
+          </div>
+          <div className="col-md-4">
+            <h4>Init Image: </h4>
+            <img
+              src={InitImage}
+              alt="Mecha Golem"
+              style={{ width: "512px", height: "680px", borderRadius: 40 }}
+            />
           </div>
           <div className="col-md-12">
             <h2>
