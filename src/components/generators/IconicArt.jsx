@@ -83,7 +83,7 @@ function Evolutions() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "75%",
+                                  width: "95%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -132,7 +132,7 @@ function Evolutions() {
               <br />
 
               <button type="submit" className="btn btn-primary" style={{width: "100%", padding: 25, marginRight: 20, borderRadius: 20}}>
-                Evolve them
+                Sculpt
               </button>
 
               <br />
