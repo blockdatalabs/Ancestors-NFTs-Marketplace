@@ -1,4 +1,4 @@
-import T1 from "../assets/images/gallery/0";
+import T1 from "../assets/images/gallery/0.jpeg";
 
 function GalleryArt() {
     return(
@@ -20,7 +20,7 @@ function GalleryArt() {
             <div className="col-md-4">
                 <img src={T1} />
             </div>
-            
+
          </div>
         </>
     )
