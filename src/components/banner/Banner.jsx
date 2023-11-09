@@ -34,6 +34,15 @@ function Banner(props) {
             <NEARWalletConnector />
           </div>
           </div>
+          <div className="row">
+            <div className="col-xl-12 col-md-12">
+              <h2> What can you achieve with AI Art?</h2>
+              <h3>Create consistent and new art styles.</h3>
+              <h3>Transform into an skillful artist without spent 10.000 hours.</h3>
+              <h3>Create an art legacy for generations to come.</h3>
+              <h3></h3>
+            </div>
+          </div>
       </div>       
       </div>
       </div>
