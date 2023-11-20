@@ -83,7 +83,7 @@ function Evolutions() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "95%",
+                                  width: "90%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -91,9 +91,6 @@ function Evolutions() {
                             </div>
                           </>
                         ))}
-                              <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
                       </div>
                     ),
                 )}

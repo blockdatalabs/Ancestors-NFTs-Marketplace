@@ -100,9 +100,7 @@ function Planets() {
                             </div>
                           </>
                         ))}
-                              <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
+
                       </div>
                     ),
                 )}

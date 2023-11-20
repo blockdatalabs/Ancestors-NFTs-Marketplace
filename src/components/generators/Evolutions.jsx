@@ -89,12 +89,12 @@ function Evolutions() {
                       <div className="row" key={index}>
                         {leoImage.generated_images.map((leoGenerate, idx) => (
                           <>
-                            <div className="col-md-4" key={idx}>
+                            <div className="col-md-12" key={idx}>
                               <h2>Gen {idx + 1}</h2>
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "75%",
+                                  width: "85%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
@@ -102,9 +102,6 @@ function Evolutions() {
                             </div>
                           </>
                         ))}
-                              <h5>
-                                Previous Creator Prompt: {leoImage.prompt}
-                              </h5>
                       </div>
                     ),
                 )}
