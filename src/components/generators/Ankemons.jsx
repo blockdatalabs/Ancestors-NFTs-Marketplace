@@ -184,12 +184,12 @@ function Ankemons() {
                       <div className="row" key={index}>
                         {leoImage.generated_images.map((leoGenerate, idx) => (
                           <>
-                            <div className="col-md-4" key={idx}>
+                            <div className="col-md-12" key={idx}>
                               <h4>Gen {idx + 1}</h4>
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "90%",
+                                  width: "95%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
