@@ -188,7 +188,7 @@ function Ankemons() {
                               <img
                                 src={leoGenerate?.url}
                                 style={{
-                                  width: "95%",
+                                  width: "70%",
                                   borderRadius: 40,
                                 }}
                                 alt="generations"
