@@ -170,50 +170,6 @@ function Ankemons() {
           </div>
             </form>
           </div>
-          <div className="row">
-            <br />
-            <br />
-              {generation ? (
-              <>
-              <div className="row">
-                {generation.map(
-                  (leoImage, index) =>
-                    index === 0 && (
-                      <div className="row" key={index}>
-                        {leoImage.generated_images.map((leoGenerate, idx) => (
-                          <>
-                            <div className="col-md-4" key={idx}>
-                              <h4>Gen {idx + 1}</h4>
-                              <img
-                                src={leoGenerate?.url}
-                                style={{
-                                  width: "90%",
-                                  borderRadius: 40,
-                                }}
-                                alt="generations"
-                              />
-                            </div>
-                          </>
-                        ))}
-                        <div className="col-md-12"> 
-                          <h5>
-                            Previous Creator Prompt: {leoImage.prompt}
-                          </h5>
-                        </div>
-                      </div>
-                    ),
-                )}
-                <div  className="col-md-8 " style={{ cursor: "pointer" }}>
-
-                </div>
-                
-                </div>
-                </>
-            
-          ) : (
-            <h4>Submit, wait and get the species evolutions</h4>
-          )}
-        </div>
           <div className="row" style={{ padding: 30, borderRadius: 40, border: "30px double coral", marginTop: 40, background: "#fffef7"}} ref={componentRef} >
               <h3>Ankemons Card</h3>
               <br />
@@ -245,11 +201,6 @@ function Ankemons() {
                             </div>
                           </>
                         ))}
-                        <div className="col-md-12"> 
-                          <h5>
-                            Previous Creator Prompt: {leoImage.prompt}
-                          </h5>
-                        </div>
                       </div>
                     ),
                 )}
