@@ -177,10 +177,6 @@ function Ankemons() {
                 className=" col-md-6 drop-area"
               >
               {generation ? (
-                <><br/><br/>
-                <br/><h4>Your Ankemon will appear here</h4></>
-            
-          ): (
               <>
              {generation.map(
                   (leoImage, index) =>
@@ -206,7 +202,11 @@ function Ankemons() {
                 )}
                 </>
             
-          )}
+          ) : (
+            <><br/><br/>
+            <br/><h4>Your Ankemon will appear here</h4></>
+        
+      )}
               </div>
               <div className="col-md-6">
               <textarea 
