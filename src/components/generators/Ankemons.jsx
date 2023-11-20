@@ -167,10 +167,6 @@ function Ankemons() {
               Export Card as JPEG
             </button>
           </div>
-          <div className="col-md-4">
-          <br />
-          <NEARWalletConnector />
-          </div>
           </div>
             </form>
           </div>
@@ -223,15 +219,43 @@ function Ankemons() {
               <br />
               <div
                 className=" col-md-6 drop-area"
-              
-                onDrop={handleDrop}
-                onDragOver={handleDragOver}
               >
-                {image ? (
-                  <img src={image} style={{width: "100%", borderRadius: 8,marginBottom: 40}} alt="Kudos" />
-                ) : (
-                  <h4 style={{border: "1px solid coral", borderRadius: 8, marginBottom: 40, paddingTop: 250, paddingBottom: 250, paddingLeft: 10}}><span>Drop an image here, desktop experience</span></h4>
+              {generation ? (
+                <><br/><br/>
+                <br/><h4>Your Ankemon will appear here</h4></>
+            
+          ): (
+              <>
+             {generation.map(
+                  (leoImage, index) =>
+                    index === 0 && (
+                      <div className="row" key={index}>
+                        {leoImage.generated_images.map((leoGenerate, idx) => (
+                          <>
+                            <div className="col-md-4" key={idx}>
+                              <h4>Gen {idx + 1}</h4>
+                              <img
+                                src={leoGenerate?.url}
+                                style={{
+                                  width: "90%",
+                                  borderRadius: 40,
+                                }}
+                                alt="generations"
+                              />
+                            </div>
+                          </>
+                        ))}
+                        <div className="col-md-12"> 
+                          <h5>
+                            Previous Creator Prompt: {leoImage.prompt}
+                          </h5>
+                        </div>
+                      </div>
+                    ),
                 )}
+                </>
+            
+          )}
               </div>
               <div className="col-md-6">
               <textarea 
