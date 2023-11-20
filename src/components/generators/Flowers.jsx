@@ -12,7 +12,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const getImages = async () => {
   const urlImages = "https://ancestors.pulsarforge.io/api/images";
-  await delay(22000);
+  await delay(25000);
   const resp = await fetch(urlImages, {
     method: "GET",
     headers: { "Content-type": "application/json" },
@@ -222,7 +222,7 @@ function Flowers() {
                       <div className="row" key={index}>
                         {leoImage.generated_images.map((leoGenerate, idx) => (
                           <>
-                            <div className="col-md-4" key={idx}>
+                            <div className="col-md-12" key={idx}>
                               <h4>Gen {idx + 1}</h4>
                               <img
                                 src={leoGenerate?.url}
@@ -235,11 +235,6 @@ function Flowers() {
                             </div>
                           </>
                         ))}
-                        <div className="col-md-12"> 
-                          <h5>
-                            Previous Creator Prompt: {leoImage.prompt}
-                          </h5>
-                        </div>
                       </div>
                     ),
                 )}

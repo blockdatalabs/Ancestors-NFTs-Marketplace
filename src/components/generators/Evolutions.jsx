@@ -33,7 +33,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const getImages = async () => {
   const urlImages = "https://ancestors.pulsarforge.io/api/images";
-  await delay(18000);
+  await delay(25000);
   const resp = await fetch(urlImages, {
     method: "GET",
     headers: { "Content-type": "application/json" },
@@ -82,7 +82,7 @@ function Evolutions() {
             <>
               <div className="row">
               <h4>Get your evolution here</h4>
-              <h5>Wait around 9 seconds</h5>
+              <h5>Wait around 15 seconds</h5>
               {generation.map(
                   (leoImage, index) =>
                     index === 0 && (
