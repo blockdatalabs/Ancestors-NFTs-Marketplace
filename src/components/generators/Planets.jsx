@@ -132,7 +132,7 @@ function Planets() {
               <br />
               <br />
 
-              <button type="submit" className="btn btn-primary" style={{width: 400, padding: 25, marginRight: 20, borderRadius: 20}}>
+              <button type="submit" className="btn btn-primary" style={{width: "100%", padding: 25, marginRight: 20, borderRadius: 20}}>
                 Create your combat arena, choose wisely
               </button>
 

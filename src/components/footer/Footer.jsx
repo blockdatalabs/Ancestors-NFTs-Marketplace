@@ -43,9 +43,6 @@ function Footer(props) {
                   <li>
                     <Link to="/">AI Home</Link>
                   </li>
-                  <li>
-                    <Link to="/share-tree-flowers">Kudos</Link>
-                  </li>
                 </ul>
                 <h5>Ancestors All Rights Reserved</h5>
               </div>

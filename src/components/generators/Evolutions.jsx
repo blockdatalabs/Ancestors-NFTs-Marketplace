@@ -135,7 +135,7 @@ function Evolutions() {
               <br />
 
               <button type="submit" className="btn btn-primary" style={{width: "100%", padding: 25, marginRight: 20, borderRadius: 20}}>
-                Evolve them
+                Evolve your Adaptative Combat Vehicles, most known as Mechas
               </button>
 
               <br />

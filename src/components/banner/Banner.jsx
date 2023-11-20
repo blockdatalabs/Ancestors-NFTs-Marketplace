@@ -12,44 +12,25 @@ function Banner(props) {
             <div className="banner__left">
               <div className="block-text">
                 <h2 className="heading">
-                  Glimpse of AI Art experiences.
+                  Create consistent & new art styles.
                 </h2>
-                <h4 className="heading">
-                  Kudos, Iconic Art, Gallery Art Styles, Ankemons Cards.
-                </h4>
+                <h3 className="heading">
+                  AI Image Generators, create faster, focus in world building.
+                </h3>
               </div>
             </div>
           </div>
           <div className="col-xl-6 col-md-6">
           <div className="banner__left">
-              <div className="block-text">
-          <img
-            src={TreeOfLife}
-            alt="tree of life"
-            style={{ border: "12px double", width: "500px", height: "auto", borderRadius: 40 }}
-          />
-          <div className="block-text">
-            <a href="https://www.mintbase.xyz/contract/woaps.mintbase1.near/nfts/all/0" target="_blank" rel="noreferrer"><h4 className="heading">Minter WOAPs Collection</h4></a>
-          </div>
-            <NEARWalletConnector />
-          </div>
-          </div>
-
-      </div> 
-      <div className="row">
-            <div className="col-xl-12 col-md-12">
-              <br />>
-              <br />>
-              <br />>
-              <h4> What can you achieve with AI Art?</h4>
-              <h4>Create consistent and new art styles.</h4>
-              <h4>Transform into an skillful artist without spent 10.000 hours.</h4>
-              <h4>Create an art legacy for generations to come.</h4>
-              <br />>
-              <br />>
-              <br />>
+            <div className="block-text">
+              <img
+                src={TreeOfLife}
+                alt="tree of life"
+                style={{ border: "12px double", width: "700px", height: "auto", borderRadius: 40 }}
+              />
             </div>
-          </div>      
+          </div>
+      </div>     
       </div>
       </div>
     </section>
