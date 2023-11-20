@@ -71,7 +71,6 @@ function Evolutions() {
             <>
               <div className="row">
               <h4>Get your interpretation of Iconic Art</h4>
-              <h5>Wait around 9 seconds</h5>
               {generation.map(
                   (leoImage, index) =>
                     index === 0 && (

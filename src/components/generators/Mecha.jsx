@@ -116,7 +116,7 @@ function Mecha() {
             <>
               <div className="row">
                 <div className="col-md-12">
-                  <h4>Hit the button, wait around 12 seconds, discover your driver:</h4>
+                  <h4>Hit the button</h4>
                   <br />
                   <br />
                 </div>
