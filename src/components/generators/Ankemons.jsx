@@ -214,7 +214,7 @@ function Ankemons() {
             <h4>Submit, wait and get the species evolutions</h4>
           )}
         </div>
-          <div className="row" style={{ padding: 30, borderRadius: 40, border: "30px double coral", marginTop: 40, background: "#ebe054"}} ref={componentRef} >
+          <div className="row" style={{ padding: 30, borderRadius: 40, border: "30px double coral", marginTop: 40, background: "#fffef7"}} ref={componentRef} >
               <h3>Ankemons Card</h3>
               <br />
               <div
