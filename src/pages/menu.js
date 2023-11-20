@@ -1,13 +1,13 @@
 const menus = [
   {
     id: 1,
-    name: 'AI Home',
+    name: 'Ancestors Home',
     links: "/",
-  },
+  },  
   {
     id: 2,
-    name: 'Kudos',
-    links: "/share-tree-flowers",
+    name: 'Ankemons Cards',
+    links: "/ankemons-cards",
   },
   {
     id: 3,
@@ -16,13 +16,13 @@ const menus = [
   },
   {
     id: 4,
-    name: 'Styles Gallery',
-    links: "/art-gallery",
+    name: 'Kudos',
+    links: "/share-tree-flowers",
   },
   {
     id: 5,
-    name: 'Ankemons Cards',
-    links: "/ankemons-cards",
+    name: 'Styles Gallery',
+    links: "/art-gallery",
   }
 ];
 
