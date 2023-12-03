@@ -68,8 +68,6 @@ function Evolutions() {
 
           <div className="col-md-8">
           {generation ? (
-            <h4>Submit, wait and get the species evolutions</h4>
-          ): (
             <>
               <div className="row">
               <h4>Get your interpretation of Iconic Art</h4>
@@ -97,6 +95,8 @@ function Evolutions() {
                 )}
               </div>
             </>
+          ) : (
+            <h4>Submit, wait and get the species evolutions</h4>
           )}
           </div>
           <div className="col-md-4">
