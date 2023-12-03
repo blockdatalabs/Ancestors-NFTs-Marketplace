@@ -69,19 +69,11 @@ function Evolutions() {
     <section className="banner">
       <div className="container big">
         <div className="row">
-          <div className="col-md-4">
-            <h4>Init Image: </h4>
-            <img
-              src={InitImage}
-              alt="Mecha Golem"
-              style={{ width: "412px", height: "284px", borderRadius: 40 }}
-            />
-          </div>
-          <div className="col-md-8">
+          <div className="col-md-12">
           {generation ? (
             <>
               <div className="row">
-              <h4>Get your evolution here</h4>
+              <h4>Get your 3D Character here</h4>
               <h5>Wait around 15 seconds</h5>
               {generation.map(
                   (leoImage, index) =>
@@ -114,7 +106,7 @@ function Evolutions() {
           <div className="col-md-12">
             <h2>
               {" "}
-              <br /> Evolve them{" "}
+              <br /> Build them{" "}
             </h2>
             <form onSubmit={handleSubmitLeonardo} className="form-group">
               <input
@@ -123,7 +115,7 @@ function Evolutions() {
                 id="query"
                 name="query"
                 value={query}
-                placeholder="Write Your Prompt to Create Evolutions"
+                placeholder="Write Your Prompt to Unleash Creativity"
                 onChange={(event) => setQuery(event.target.value)}
                 style={{  width: "100%", height: 100  }}
               />
@@ -139,7 +131,7 @@ function Evolutions() {
               <br />
 
               <h4 style={{ fontSize: 30 }}>
-                Knight protector, polygonal, front view, glowing blooming colors, 3d, vray render
+                Sample prompt: Knight protector, polygonal, front view, glowing blooming colors, 3d, vray render
               </h4>
               <br />
 
